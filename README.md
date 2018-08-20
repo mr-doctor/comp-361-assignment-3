@@ -1,4 +1,4 @@
-# CGRA 350 Real-time 3D Computer Graphics T2/2018 OpenGL Assignment 1
+# CGRA 350 Real-time 3D Computer Graphics T2/2018 OpenGL Assignment 2
 
 # Instructions
 
