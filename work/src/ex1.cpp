@@ -3,6 +3,12 @@
 #include <iostream>
 #include <stdexcept>
 #include <zconf.h>
+#include <cgra/bone.hpp>
+#include <fstream>
+#include <sstream>
+#include <memory.h>
+#include <iterator>
+#include <array>
 
 #include "opengl.hpp"
 #include "imgui.h"
@@ -26,10 +32,117 @@ void Application::init() {
 
 	glm::vec3 rotation(1.0f, 1.0f, 0.0f);
 	m_rotationMatrix = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(rotation[0], rotation[1], rotation[2]));
+}
 
-    // Create the cube mesh
-//    createCube();
-	sphere_latlong();
+cgra::Bone Application::parse_asf(const char * filename) {
+
+	std::ifstream asf_file(filename);
+
+	if (!asf_file.is_open()) {
+		std::cerr << "File not open\n";
+		return nullptr;
+	}
+
+	std::vector<cgra::Bone> all_bones;
+
+	for (std::string line; std::getline(asf_file, line);) {
+		std::istringstream line_parser(line);
+
+		if (line == ":bonedata") {
+			continue;
+		}
+	}
+
+	std::string line;
+	while (asf_file) {
+		std::getline(asf_file, line);
+
+		if (line == ":bonedata") {
+
+			std::getline(asf_file, line);
+			std::getline(asf_file, line);
+
+			int id = parse_id(line);
+
+			std::getline(asf_file, line);
+
+			std::string name = parse_name(line);
+
+			std::getline(asf_file, line);
+
+			glm::vec3 direction = parse_direction(line);
+
+			float length = parse_length(line);
+
+			std::getline(asf_file, line);
+
+			glm::vec3 axes = parse_direction(line);
+
+			std::getline(asf_file, line);
+
+			if (line == "end") {
+				cgra::Bone newBone = cgra::Bone((id == 1), id, name, direction, length, axes);
+				all_bones.push_back(newBone);
+				continue;
+			}
+
+			std::array<bool, 3> dof = parse_dof(line);
+
+		}
+	}
+
+}
+
+int Application::parse_id(std::string line) {
+	std::istringstream iss(line);
+	std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+	                                 std::istream_iterator<std::string>());
+
+	return std::stoi(results[results.size() - 1]);
+}
+
+std::string Application::parse_name(std::string line) {
+	std::istringstream iss(line);
+	std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+	                                 std::istream_iterator<std::string>());
+
+	return results[results.size() - 1];
+}
+
+glm::vec3 Application::parse_direction(std::string line) {
+	std::istringstream iss(line);
+	std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+	                                 std::istream_iterator<std::string>());
+
+	return glm::vec3(results[1], results[2], results[3]);
+}
+
+float Application::parse_length(std::string line) {
+	std::istringstream iss(line);
+	std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+	                                 std::istream_iterator<std::string>());
+
+	return std::stof(results[results.size() - 1]);
+}
+
+std::array<bool, 3> Application::parse_dof(std::string line) {
+	std::istringstream iss(line);
+	std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+	                                 std::istream_iterator<std::string>());
+
+	std::array<bool, 3> dof;
+
+	for (int i = 1; i < results.size(); i++) {
+		if (results[i] == "rx") {
+			dof[0] = true;
+		} else if (results[i] == "ry") {
+			dof[1] = true;
+		} else if (results[i] == "rz") {
+			dof[2] = true;
+		}
+	}
+
+	return dof;
 }
 
 void Application::set_shaders(const char * vertex, const char * fragment) {
@@ -86,263 +199,7 @@ void Application::apply_arcball(glm::vec2 current_mouse_XY) {
 	m_rotationMatrix = arcball_rotate;
 }
 
-void Application::createCube() {
-
-	cgra::Matrix<double> vertices(36, 3);
-	cgra::Matrix<unsigned int> triangles(12, 3);
-
-	vertices.setRow(0, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(1, { -1.0f, -1.0f,  1.0f });
-	vertices.setRow(2, { -1.0f,  1.0f,  1.0f });
-	vertices.setRow(3, {  1.0f,  1.0f, -1.0f });
-	vertices.setRow(4, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(5, { -1.0f,  1.0f, -1.0f });
-	vertices.setRow(6, {  1.0f, -1.0f,  1.0f });
-	vertices.setRow(7, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(8, {  1.0f, -1.0f, -1.0f });
-	vertices.setRow(9, {  1.0f,  1.0f, -1.0f });
-	vertices.setRow(10, {  1.0f, -1.0f, -1.0f });
-	vertices.setRow(11, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(12, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(13, { -1.0f,  1.0f,  1.0f });
-	vertices.setRow(14, { -1.0f,  1.0f, -1.0f });
-	vertices.setRow(15, {  1.0f, -1.0f,  1.0f });
-	vertices.setRow(16, { -1.0f, -1.0f,  1.0f });
-	vertices.setRow(17, { -1.0f, -1.0f, -1.0f });
-	vertices.setRow(18, { -1.0f,  1.0f,  1.0f });
-	vertices.setRow(19, { -1.0f, -1.0f,  1.0f });
-	vertices.setRow(20, {  1.0f, -1.0f,  1.0f });
-	vertices.setRow(21, {  1.0f,  1.0f,  1.0f });
-	vertices.setRow(22, {  1.0f, -1.0f, -1.0f });
-	vertices.setRow(23, {  1.0f,  1.0f, -1.0f });
-	vertices.setRow(24, {  1.0f, -1.0f, -1.0f });
-	vertices.setRow(25, {  1.0f,  1.0f,  1.0f });
-	vertices.setRow(26, {  1.0f, -1.0f,  1.0f });
-	vertices.setRow(27, {  1.0f,  1.0f,  1.0f });
-	vertices.setRow(28, {  1.0f,  1.0f, -1.0f });
-	vertices.setRow(29, { -1.0f,  1.0f, -1.0f });
-	vertices.setRow(30, {  1.0f,  1.0f,  1.0f });
-	vertices.setRow(31, { -1.0f,  1.0f, -1.0f });
-	vertices.setRow(32, { -1.0f,  1.0f,  1.0f });
-	vertices.setRow(33, {  1.0f,  1.0f,  1.0f });
-	vertices.setRow(34, { -1.0f,  1.0f,  1.0f });
-	vertices.setRow(35, {  1.0f, -1.0f,  1.0f });
-
-	triangles.setRow(0, { 0, 1, 2 });
-	triangles.setRow(1, { 3, 4, 5 });
-	triangles.setRow(2, { 6, 7, 8 });
-	triangles.setRow(3, { 9, 10, 11 });
-	triangles.setRow(4, { 12, 13, 14 });
-	triangles.setRow(5, { 15, 16, 17 });
-	triangles.setRow(6, { 18, 19, 20 });
-	triangles.setRow(7, { 21, 22, 23 });
-	triangles.setRow(8, { 24, 25, 26 });
-	triangles.setRow(9, { 27, 28, 29 });
-	triangles.setRow(10, { 30, 31, 32 });
-	triangles.setRow(11, { 33, 34, 35 });
-
-    m_mesh.setData(vertices, triangles);
-}
-
-glm::vec3 sphere_facet(int i, int j, float thetaStep, float phiStep) {
-	float theta = i * thetaStep;
-	float phi = j * phiStep;
-	glm::vec3 vertex(
-			std::sin(theta) * std::cos(phi),
-			std::sin(theta) * std::sin(phi),
-			std::cos(theta));
-
-	return vertex;
-}
-
-glm::vec2 Application::generate_uv(glm::vec3 vec3) {
-	glm::vec3 n = glm::normalize(vec3 - glm::vec3(0.0, 0.0, 0.0));
-
-	float u = static_cast<float>(atan2(n.x, n.z) / (2 * glm::pi<float>()) + 0.5);
-	float v = static_cast<float>(n.y * 0.5 + 0.5);
-
-	return glm::vec2(u, v);
-}
-
-
-void Application::sphere_latlong() {
-	if (!m_sphere_latlong) {
-		return;
-	}
-	/*m_divisions_lon = std::max(4, m_divisions_lon);
-	m_divisions_lat = std::max(4, m_divisions_lat);*/
-
-	float radius = 1.0f;
-
-	std::vector<glm::vec3> points;
-	std::vector<glm::uvec3> tris;
-
-	auto pi = glm::pi<float>();
-
-
-	float thetaStep = pi / m_divisions_lat;
-	float phiStep = (2 * pi) / m_divisions_lon;
-
-	for (int i = 0; i <= m_divisions_lat; ++i) {
-		for (int j = 0; j <= m_divisions_lon; ++j) {
-
-			// i = xIndex, j = yIndex
-			// build from top down
-
-			glm::vec3 TL = sphere_facet(i, j, thetaStep, phiStep) * radius;
-			glm::vec3 TR = sphere_facet(i + 1, j, thetaStep, phiStep) * radius;
-			glm::vec3 BL = sphere_facet(i, j + 1, thetaStep, phiStep) * radius;
-			glm::vec3 BR = sphere_facet(i + 1, j + 1, thetaStep, phiStep) * radius;
-
-			auto indexTL = points.size();
-
-			points.push_back(TL);
-			points.push_back(TR);
-			points.push_back(BL);
-			points.push_back(BR);
-
-
-			 /*
-			 A given facet (2 triangles) of the sphere is represented with indices thus:
-			 0       1
-			 ---------
-			 |      /|
-			 |     / |
-			 |    /  |
-			 |   /   |
-			 |  /    |
-			 | /     |
-			 ---------
-			 2       3
-			  */
-
-
-			tris.emplace_back(indexTL, indexTL + 1, indexTL + 2);
-			tris.emplace_back(indexTL + 2, indexTL + 1, indexTL + 3);
-		}
-	}
-
-	cgra::Matrix<double> vertices(static_cast<unsigned int>(points.size()), 3);
-	cgra::Matrix<unsigned int> triangles(static_cast<unsigned int>(tris.size()), 3);
-
-	for (unsigned int k = 0; k < points.size(); k++) {
-		vertices.setRow(k, { points[k].x, points[k].y, points[k].z });
-	}
-
-	for (unsigned int k = 0; k < tris.size(); k++) {
-		triangles.setRow(k, {tris[k].x, tris[k].y, tris[k].z});
-	}
-
-	m_mesh.setData(vertices, triangles);
-}
-
-void Application::cube_face(std::vector<glm::vec3> *points,
-                    std::vector<glm::uvec3> *tris,
-                    std::vector<glm::vec2> *textures,
-                    int face,
-					float radius,
-                    float step_lon,
-                    float step_lat) {
-	for (int i = 0; i <= m_divisions_lon; ++i) {
-		for (int j = 0; j <= m_divisions_lat; ++j) {
-			glm::vec3 BL;
-			glm::vec3 BR;
-			glm::vec3 TL;
-			glm::vec3 TR;
-
-			if (face == 1 || face == 6) {
-				BL = glm::vec3(i * step_lon - 1, j * step_lat - 1, (face == 1) ? -(radius) : (radius));
-				BR = glm::vec3((i + 1) * step_lon - 1, j * step_lat - 1, (face == 1) ? -(radius) : (radius));
-				TL = glm::vec3(i * step_lon - 1, (j + 1) * step_lat - 1, (face == 1) ? -(radius) : (radius));
-				TR = glm::vec3((i + 1) * step_lon - 1, (j + 1) * step_lat - 1, (face == 1) ? -(radius) : (radius));
-			} else if (face == 2 || face == 5) {
-				BL = glm::vec3(i * step_lon - 1, (face == 2) ? (radius) : -(radius), j * step_lat - 1);
-				BR = glm::vec3((i + 1) * step_lon - 1, (face == 2) ? (radius) : -(radius), j * step_lat - 1);
-				TL = glm::vec3(i * step_lon - 1, (face == 2) ? (radius) : -(radius), (j + 1) * step_lat - 1);
-				TR = glm::vec3((i + 1) * step_lon - 1, (face == 2) ? (radius) : -(radius), (j + 1) * step_lat - 1);
-			} else if (face == 3 || face == 4) {
-				BL = glm::vec3((face == 3) ? -(radius) : (radius), i * step_lon - 1, j * step_lat - 1);
-				BR = glm::vec3((face == 3) ? -(radius) : (radius), (i + 1) * step_lon - 1, j * step_lat - 1);
-				TL = glm::vec3((face == 3) ? -(radius) : (radius), i * step_lon - 1, (j + 1) * step_lat - 1);
-				TR = glm::vec3((face == 3) ? -(radius) : (radius), (i + 1) * step_lon - 1, (j + 1) * step_lat - 1);
-			}
-
-			auto indexTL = points->size();
-
-			points->push_back(BL);
-			points->push_back(BR);
-			points->push_back(TL);
-			points->push_back(TR);
-
-			/*
-			A given facet (2 triangles) of the sphere is represented with indices thus:
-			0       1
-			---------
-			|      /|
-			|     / |
-			|    /  |
-			|   /   |
-			|  /    |
-			| /     |
-			---------
-			2       3
-			 */
-
-			if (face >= 4) {
-				tris->emplace_back(indexTL, indexTL + 1, indexTL + 2);
-				tris->emplace_back(indexTL + 2, indexTL + 1, indexTL + 3);
-			} else {
-				tris->emplace_back(indexTL, indexTL + 2, indexTL + 1);
-				tris->emplace_back(indexTL + 2, indexTL + 3, indexTL + 1);
-			}
-		}
-	}
-}
-
-void Application::sphere_from_cube() {
-
-	std::vector<glm::vec3> points;
-	std::vector<glm::uvec3> tris;
-
-	float step_lon = 2.0f / (m_divisions_lon + 1);
-	float step_lat = 2.0f / (m_divisions_lat + 1);
-
-	cube_face(&points, &tris, 1, 1.0f, step_lon, step_lat);
-	cube_face(&points, &tris, 2, 1.0f, step_lon, step_lat);
-	cube_face(&points, &tris, 3, 1.0f, step_lon, step_lat);
-	cube_face(&points, &tris, 4, 1.0f, step_lon, step_lat);
-	cube_face(&points, &tris, 5, 1.0f, step_lon, step_lat);
-	cube_face(&points, &tris, 6, 1.0f, step_lon, step_lat);
-
-	for (auto &point : points) {
-		point = glm::normalize(point);
-	}
-
-	cgra::Matrix<double> vertices(static_cast<unsigned int>(points.size()), 3);
-	cgra::Matrix<unsigned int> triangles(static_cast<unsigned int>(tris.size()), 3);
-
-	for (unsigned int k = 0; k < points.size(); k++) {
-		vertices.setRow(k, { points[k].x, points[k].y, points[k].z });
-	}
-
-	for (unsigned int k = 0; k < tris.size(); k++) {
-		triangles.setRow(k, {tris[k].x, tris[k].y, tris[k].z});
-	}
-
-	m_mesh.setData(vertices, triangles);
-	
-}
-
-
 void Application::drawScene() {
-	GLint unf_texture = glGetUniformLocation(texture, "BaseMap");
-	glUniform1i(unf_texture, 0);
-	unf_texture = glGetUniformLocation(normal, "NormalMap");
-	glUniform1i(unf_texture, 1);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, texture);
-	glActiveTexture(GL_TEXTURE1);
-	glBindTexture(GL_TEXTURE_2D, normal);
     // Calculate the aspect ratio of the viewport;
     // width / height
     float aspectRatio = m_viewportSize.x / m_viewportSize.y;
@@ -379,28 +236,6 @@ void Application::doGUI() {
         // This block is executed if the input changes
 		m_rotationMatrix = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(rotation[0], rotation[1], rotation[2]));
     }
-
-    if (ImGui::SliderInt("Lateral Divisions", &m_divisions_lat, (m_sphere_latlong) ? 4 : 0, 80)) {
-	    (m_sphere_mode == 0) ? sphere_latlong() : sphere_from_cube();
-    }
-
-	if (ImGui::SliderInt("Longitudinal Divisions", &m_divisions_lon, (m_sphere_latlong) ? 4 : 0, 80)) {
-		(m_sphere_mode == 0) ? sphere_latlong() : sphere_from_cube();
-	}
-
-	if (ImGui::Checkbox("Use sphere from latitude and longitude", &m_sphere_latlong)) {
-    	m_sphere_from_cube = false;
-    	m_sphere_mode = 0;
-    	m_divisions_lon = std::max(4, m_divisions_lon);
-		m_divisions_lat = std::max(4, m_divisions_lat);
-		sphere_latlong();
-	}
-
-	if (ImGui::Checkbox("Use sphere from cube", &m_sphere_from_cube)) {
-		m_sphere_latlong = false;
-		m_sphere_mode = 1;
-		sphere_from_cube();
-	}
 
     ImGui::End();
 }

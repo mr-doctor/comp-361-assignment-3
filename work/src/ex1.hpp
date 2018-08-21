@@ -48,10 +48,6 @@ public:
 
     void init();
 
-    void createCube();
-	void sphere_latlong();
-	void sphere_from_cube();
-
     void drawScene();
     void doGUI();
 
@@ -69,16 +65,20 @@ public:
 	int m_divisions_lat = 10;
 	bool m_sphere_latlong = false;
 
-	void cube_face(std::vector<glm::vec3> *points,
-	          std::vector<glm::uvec3> *tris,
-	          std::vector<glm::vec2> *textures,
-	          int face,
-	          float radius,
-	          float step_lon,
-	          float step_lat);
-
 	bool m_sphere_from_cube = false;
 	int m_sphere_mode = 0;
 
 	void set_shaders(const char *vertex, const char *fragment);
+
+	cgra::Bone parse_asf(const char *filename);
+
+	int parse_id(std::string line);
+
+	std::string parse_name(std::string line);
+
+	glm::vec3 parse_direction(std::string line);
+
+	float parse_length(std::string line);
+
+	std::array<bool, 3> parse_dof(std::string line);
 };

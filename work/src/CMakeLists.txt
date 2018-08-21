@@ -8,7 +8,7 @@ SET(sources
 
   opengl.hpp
   main.cpp
-        cgra/bone.cpp)
+        cgra/bone.cpp parser.cpp parser.hpp)
 
 add_executable(${CGRA_PROJECT} ${sources})
 
