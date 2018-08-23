@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cgra/bone.hpp>
 #include "cgra/mesh.hpp"
 #include "cgra/shader.hpp"
 
@@ -81,4 +82,6 @@ public:
 	float parse_length(std::string line);
 
 	std::array<bool, 3> parse_dof(std::string line);
+
+	glm::vec3 parse_axes(std::string line);
 };

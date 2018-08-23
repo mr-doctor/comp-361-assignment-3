@@ -2,6 +2,7 @@
 
 #include <utility>
 #include <vector>
+#include <array>
 
 #include "matrix.hpp"
 
@@ -25,7 +26,7 @@ namespace cgra {
 		}
 
 		bool is_root;
-		Bone parent = nullptr;
+//		Bone parent = nullptr;
 		std::vector<Bone> children;
 
 		int id;
@@ -38,10 +39,11 @@ namespace cgra {
 
 		void connect_child(Bone child_bone);
 
-		Bone Bone::get_bone(int bone_id);
+		Bone get_bone(int bone_id);
 
-		Bone Bone::get_bone(std::string bone_name);
+		Bone get_bone(std::string bone_name);
 
+		std::array<bool, 3> dof;
 	};
 
 }

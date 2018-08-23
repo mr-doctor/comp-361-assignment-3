@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/bone.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/cgra/bone.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/imgui_impl_glfw_gl3.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/mesh.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/shader.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/cgra/shader.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/wavefront.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/ex1.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/ex1.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/main.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/main.cpp.obj"
+  "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/parser.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/parser.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

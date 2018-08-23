@@ -170,6 +170,33 @@ a1/fast:
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/build
 .PHONY : a1/fast
 
+cgra/bone.obj: cgra/bone.cpp.obj
+
+.PHONY : cgra/bone.obj
+
+# target to build an object file
+cgra/bone.cpp.obj:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/cgra/bone.cpp.obj
+.PHONY : cgra/bone.cpp.obj
+
+cgra/bone.i: cgra/bone.cpp.i
+
+.PHONY : cgra/bone.i
+
+# target to preprocess a source file
+cgra/bone.cpp.i:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/cgra/bone.cpp.i
+.PHONY : cgra/bone.cpp.i
+
+cgra/bone.s: cgra/bone.cpp.s
+
+.PHONY : cgra/bone.s
+
+# target to generate assembly for a file
+cgra/bone.cpp.s:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/cgra/bone.cpp.s
+.PHONY : cgra/bone.cpp.s
+
 cgra/imgui_impl_glfw_gl3.obj: cgra/imgui_impl_glfw_gl3.cpp.obj
 
 .PHONY : cgra/imgui_impl_glfw_gl3.obj
@@ -332,6 +359,33 @@ main.cpp.s:
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parser.obj: parser.cpp.obj
+
+.PHONY : parser.obj
+
+# target to build an object file
+parser.cpp.obj:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/parser.cpp.obj
+.PHONY : parser.cpp.obj
+
+parser.i: parser.cpp.i
+
+.PHONY : parser.i
+
+# target to preprocess a source file
+parser.cpp.i:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/parser.cpp.i
+.PHONY : parser.cpp.i
+
+parser.s: parser.cpp.s
+
+.PHONY : parser.s
+
+# target to generate assembly for a file
+parser.cpp.s:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/parser.cpp.s
+.PHONY : parser.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -345,6 +399,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install/strip
+	@echo ... cgra/bone.obj
+	@echo ... cgra/bone.i
+	@echo ... cgra/bone.s
 	@echo ... cgra/imgui_impl_glfw_gl3.obj
 	@echo ... cgra/imgui_impl_glfw_gl3.i
 	@echo ... cgra/imgui_impl_glfw_gl3.s
@@ -363,6 +420,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... parser.obj
+	@echo ... parser.i
+	@echo ... parser.s
 .PHONY : help
 
 

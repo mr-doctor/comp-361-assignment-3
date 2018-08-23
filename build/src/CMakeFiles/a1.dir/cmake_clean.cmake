@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/a1.dir/ex1.cpp.obj"
   "CMakeFiles/a1.dir/main.cpp.obj"
+  "CMakeFiles/a1.dir/cgra/bone.cpp.obj"
+  "CMakeFiles/a1.dir/parser.cpp.obj"
   "CMakeFiles/a1.dir/cgra/mesh.cpp.obj"
   "CMakeFiles/a1.dir/cgra/shader.cpp.obj"
   "CMakeFiles/a1.dir/cgra/wavefront.cpp.obj"

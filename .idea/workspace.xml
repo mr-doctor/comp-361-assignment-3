@@ -16,22 +16,27 @@
   <component name="ChangeListManager">
     <list default="true" id="79339780-1289-4e5c-8ec2-e953dc705329" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/a1.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/glew/CMakeFiles/glew.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/glew/CMakeFiles/glew.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/glew/CMakeFiles/glew.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/glew/CMakeFiles/glew.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/glfw/src/CMakeFiles/glfw.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/glfw/src/CMakeFiles/glfw.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/glfw/src/CMakeFiles/glfw.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/glfw/src/CMakeFiles/glfw.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/imgui/CMakeFiles/imgui.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/imgui/CMakeFiles/imgui.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vendor/imgui/CMakeFiles/imgui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/vendor/imgui/CMakeFiles/imgui.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/CGRA_PROJECT_a1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/CGRA_PROJECT_a1.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/a1.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/vendor/glew/CMakeFiles/glew.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/vendor/glew/CMakeFiles/glew.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/vendor/glfw/src/CMakeFiles/glfw.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/vendor/glfw/src/CMakeFiles/glfw.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/cmake-build-debug/vendor/imgui/CMakeFiles/imgui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/work/cmake-build-debug/vendor/imgui/CMakeFiles/imgui.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/src/cgra/bone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/cgra/bone.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/src/cgra/bone.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/cgra/bone.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/work/src/cgra/mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/cgra/mesh.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/src/ex1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/ex1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work/src/ex1.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/work/src/ex1.hpp" afterDir="false" />
     </list>
@@ -49,8 +54,8 @@
       <file leaf-file-name="ex1.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/work/src/ex1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+            <state relative-caret-position="344">
+              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -58,43 +63,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="priman.asf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/work/res/models/priman.asf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" column="10" lean-forward="true" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_bone_1.asf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work/res/models/test_bone_1.asf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="221">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ex1.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/work/src/ex1.hpp">
+      <file leaf-file-name="priman.asf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/work/res/models/priman.asf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="299">
+              <caret line="247" column="12" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_bone_2.asf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/work/res/models/test_bone_2.asf">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="bone.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="459">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mesh.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/work/src/cgra/mesh.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="123" column="41" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -102,11 +102,8 @@
       <file leaf-file-name="bone.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#14#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -114,7 +111,7 @@
       <file leaf-file-name="matrix.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work/src/cgra/matrix.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="578">
               <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
             </state>
           </provider>
@@ -141,6 +138,13 @@
       <find>setRow</find>
       <find>-&gt;</find>
       <find>bitange</find>
+      <find>stof</find>
+      <find>stoi</find>
+      <find>return</find>
+      <find>false</find>
+      <find>bit</find>
+      <find>line =</find>
+      <find>axes</find>
     </findStrings>
     <replaceStrings>
       <replace>0.5 : -0.5</replace>
@@ -162,12 +166,12 @@
         <option value="$PROJECT_DIR$/work/res/shaders/oren-nayar.fs.glsl" />
         <option value="$PROJECT_DIR$/work/res/shaders/texture.fs.glsl" />
         <option value="$PROJECT_DIR$/work/res/shaders/texture.vs.glsl" />
-        <option value="$PROJECT_DIR$/work/src/cgra/mesh.cpp" />
         <option value="$PROJECT_DIR$/work/src/cgra/mesh.hpp" />
-        <option value="$PROJECT_DIR$/work/src/ex1.hpp" />
         <option value="$PROJECT_DIR$/work/res/models/priman.asf" />
-        <option value="$PROJECT_DIR$/work/src/cgra/bone.cpp" />
         <option value="$PROJECT_DIR$/work/src/cgra/bone.hpp" />
+        <option value="$PROJECT_DIR$/work/src/ex1.hpp" />
+        <option value="$PROJECT_DIR$/work/src/cgra/bone.cpp" />
+        <option value="$PROJECT_DIR$/work/src/cgra/mesh.cpp" />
         <option value="$PROJECT_DIR$/work/src/ex1.cpp" />
       </list>
     </option>
@@ -192,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,7 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,26 +317,26 @@
       <workItem from="1533808782822" duration="1127000" />
       <workItem from="1533949619026" duration="20525000" />
       <workItem from="1534819596088" duration="11428000" />
+      <workItem from="1534977370002" duration="9938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95581000" />
+    <option name="totallyTimeSpent" value="105519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17966281" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.27813852" />
+      <window_info anchor="bottom" id="CMake" order="7" visible="true" weight="0.27813852" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -355,6 +359,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work/src/cgra/matrix.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/work/vendor/glm/glm/gtc/constants.inl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -648,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/work/src/cgra/mesh.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/work/src/cgra/mesh.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -664,13 +682,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/work/src/cgra/matrix.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="578">
           <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.h">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/work/src/parser.hpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -679,54 +694,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/work/src/parser.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work/res/models/test_bone_1.asf">
+    <entry file="file://$PROJECT_DIR$/work/src/ex1.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="429">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#14#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/work/src/ex1.hpp">
+    <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="476">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="459">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work/src/cgra/mesh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="123" column="41" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work/res/models/test_bone_1.asf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/work/res/models/priman.asf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="10" lean-forward="true" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work/res/models/test_bone_2.asf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work/src/cgra/bone.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#14#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="299">
+          <caret line="247" column="12" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/work/src/ex1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+        <state relative-caret-position="344">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
