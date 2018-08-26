@@ -112,10 +112,38 @@ src/CMakeFiles/a1.dir/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a1.dir/parser.cpp.s"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\parser.cpp -o CMakeFiles\a1.dir\parser.cpp.s
 
+src/CMakeFiles/a1.dir/skeleton.cpp.obj: src/CMakeFiles/a1.dir/flags.make
+src/CMakeFiles/a1.dir/skeleton.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
+src/CMakeFiles/a1.dir/skeleton.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/skeleton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/a1.dir/skeleton.cpp.obj"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\skeleton.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\skeleton.cpp
+
+src/CMakeFiles/a1.dir/skeleton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a1.dir/skeleton.cpp.i"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\skeleton.cpp > CMakeFiles\a1.dir\skeleton.cpp.i
+
+src/CMakeFiles/a1.dir/skeleton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a1.dir/skeleton.cpp.s"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\skeleton.cpp -o CMakeFiles\a1.dir\skeleton.cpp.s
+
+src/CMakeFiles/a1.dir/printer.cpp.obj: src/CMakeFiles/a1.dir/flags.make
+src/CMakeFiles/a1.dir/printer.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
+src/CMakeFiles/a1.dir/printer.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/printer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/a1.dir/printer.cpp.obj"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\printer.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\printer.cpp
+
+src/CMakeFiles/a1.dir/printer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a1.dir/printer.cpp.i"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\printer.cpp > CMakeFiles\a1.dir\printer.cpp.i
+
+src/CMakeFiles/a1.dir/printer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a1.dir/printer.cpp.s"
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\printer.cpp -o CMakeFiles\a1.dir\printer.cpp.s
+
 src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj: src/CMakeFiles/a1.dir/flags.make
 src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
 src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\cgra\mesh.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\cgra\mesh.cpp
 
 src/CMakeFiles/a1.dir/cgra/mesh.cpp.i: cmake_force
@@ -129,7 +157,7 @@ src/CMakeFiles/a1.dir/cgra/mesh.cpp.s: cmake_force
 src/CMakeFiles/a1.dir/cgra/shader.cpp.obj: src/CMakeFiles/a1.dir/flags.make
 src/CMakeFiles/a1.dir/cgra/shader.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
 src/CMakeFiles/a1.dir/cgra/shader.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/a1.dir/cgra/shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/a1.dir/cgra/shader.cpp.obj"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\cgra\shader.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\cgra\shader.cpp
 
 src/CMakeFiles/a1.dir/cgra/shader.cpp.i: cmake_force
@@ -143,7 +171,7 @@ src/CMakeFiles/a1.dir/cgra/shader.cpp.s: cmake_force
 src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj: src/CMakeFiles/a1.dir/flags.make
 src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
 src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/wavefront.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\cgra\wavefront.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\cgra\wavefront.cpp
 
 src/CMakeFiles/a1.dir/cgra/wavefront.cpp.i: cmake_force
@@ -157,7 +185,7 @@ src/CMakeFiles/a1.dir/cgra/wavefront.cpp.s: cmake_force
 src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj: src/CMakeFiles/a1.dir/flags.make
 src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj: src/CMakeFiles/a1.dir/includes_CXX.rsp
 src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj: C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/cgra/imgui_impl_glfw_gl3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.obj"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\a1.dir\cgra\imgui_impl_glfw_gl3.cpp.obj -c C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\work\src\cgra\imgui_impl_glfw_gl3.cpp
 
 src/CMakeFiles/a1.dir/cgra/imgui_impl_glfw_gl3.cpp.i: cmake_force
@@ -174,6 +202,8 @@ a1_OBJECTS = \
 "CMakeFiles/a1.dir/main.cpp.obj" \
 "CMakeFiles/a1.dir/cgra/bone.cpp.obj" \
 "CMakeFiles/a1.dir/parser.cpp.obj" \
+"CMakeFiles/a1.dir/skeleton.cpp.obj" \
+"CMakeFiles/a1.dir/printer.cpp.obj" \
 "CMakeFiles/a1.dir/cgra/mesh.cpp.obj" \
 "CMakeFiles/a1.dir/cgra/shader.cpp.obj" \
 "CMakeFiles/a1.dir/cgra/wavefront.cpp.obj" \
@@ -186,6 +216,8 @@ bin/a1.exe: src/CMakeFiles/a1.dir/ex1.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/main.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/cgra/bone.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/parser.cpp.obj
+bin/a1.exe: src/CMakeFiles/a1.dir/skeleton.cpp.obj
+bin/a1.exe: src/CMakeFiles/a1.dir/printer.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/cgra/mesh.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/cgra/shader.cpp.obj
 bin/a1.exe: src/CMakeFiles/a1.dir/cgra/wavefront.cpp.obj
@@ -197,7 +229,7 @@ bin/a1.exe: bin/libimgui.a
 bin/a1.exe: src/CMakeFiles/a1.dir/linklibs.rsp
 bin/a1.exe: src/CMakeFiles/a1.dir/objects1.rsp
 bin/a1.exe: src/CMakeFiles/a1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ..\bin\a1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ..\bin\a1.exe"
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\a1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

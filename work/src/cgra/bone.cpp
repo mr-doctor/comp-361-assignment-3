@@ -16,7 +16,7 @@ namespace cgra {
 				return child;
 			}
 		}
-		return cgra::Bone(false, 0, "", glm::vec3(0), 0.0f, glm::vec3(0));;
+		return cgra::Bone(false, -1, "", glm::vec3(0), 0.0f, glm::vec3(0));;
 	}
 
 	Bone Bone::get_bone(int bone_id) {
@@ -25,7 +25,7 @@ namespace cgra {
 				return child;
 			}
 		}
-		return cgra::Bone(false, 0, "", glm::vec3(0), 0.0f, glm::vec3(0));;
+		return cgra::Bone(false, -1, "", glm::vec3(0), 0.0f, glm::vec3(0));;
 	}
 
 }

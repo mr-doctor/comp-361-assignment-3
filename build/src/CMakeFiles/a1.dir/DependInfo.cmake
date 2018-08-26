@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/ex1.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/ex1.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/main.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/main.cpp.obj"
   "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/parser.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/parser.cpp.obj"
+  "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/printer.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/printer.cpp.obj"
+  "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/skeleton.cpp" "C:/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/build/src/CMakeFiles/a1.dir/skeleton.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

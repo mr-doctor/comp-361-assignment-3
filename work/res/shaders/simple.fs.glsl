@@ -7,8 +7,8 @@ in vec3 fragNormal;
 
 const vec3 lightDir = vec3(0.25, 0.25, -1);
 
-const vec3 ambientColor = vec3(0.0, 0.0, 1.0);
-const vec3 diffuseColor = vec3(0.4, 0.4, 1.0);
+const vec3 ambientColor = vec3(0.5, 0.5, 0.5);
+const vec3 diffuseColor = vec3(0.4, 0.4, 0.4);
 const vec3 specColor    = vec3(0.2, 0.1, 0.1);
 
 const float shininess = 16.0;

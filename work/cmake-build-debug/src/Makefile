@@ -387,6 +387,60 @@ parser.cpp.s:
 	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/parser.cpp.s
 .PHONY : parser.cpp.s
 
+printer.o: printer.cpp.o
+
+.PHONY : printer.o
+
+# target to build an object file
+printer.cpp.o:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/printer.cpp.o
+.PHONY : printer.cpp.o
+
+printer.i: printer.cpp.i
+
+.PHONY : printer.i
+
+# target to preprocess a source file
+printer.cpp.i:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/printer.cpp.i
+.PHONY : printer.cpp.i
+
+printer.s: printer.cpp.s
+
+.PHONY : printer.s
+
+# target to generate assembly for a file
+printer.cpp.s:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/printer.cpp.s
+.PHONY : printer.cpp.s
+
+skeleton.o: skeleton.cpp.o
+
+.PHONY : skeleton.o
+
+# target to build an object file
+skeleton.cpp.o:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/skeleton.cpp.o
+.PHONY : skeleton.cpp.o
+
+skeleton.i: skeleton.cpp.i
+
+.PHONY : skeleton.i
+
+# target to preprocess a source file
+skeleton.cpp.i:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/skeleton.cpp.i
+.PHONY : skeleton.cpp.i
+
+skeleton.s: skeleton.cpp.s
+
+.PHONY : skeleton.s
+
+# target to generate assembly for a file
+skeleton.cpp.s:
+	cd /cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/cmake-build-debug && $(MAKE) -f src/CMakeFiles/a1.dir/build.make src/CMakeFiles/a1.dir/skeleton.cpp.s
+.PHONY : skeleton.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -424,6 +478,12 @@ help:
 	@echo "... parser.o"
 	@echo "... parser.i"
 	@echo "... parser.s"
+	@echo "... printer.o"
+	@echo "... printer.i"
+	@echo "... printer.s"
+	@echo "... skeleton.o"
+	@echo "... skeleton.i"
+	@echo "... skeleton.s"
 .PHONY : help
 
 

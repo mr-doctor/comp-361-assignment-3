@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/a1.dir/main.cpp.o"
   "CMakeFiles/a1.dir/cgra/bone.cpp.o"
   "CMakeFiles/a1.dir/parser.cpp.o"
+  "CMakeFiles/a1.dir/skeleton.cpp.o"
+  "CMakeFiles/a1.dir/printer.cpp.o"
   "CMakeFiles/a1.dir/cgra/mesh.cpp.o"
   "CMakeFiles/a1.dir/cgra/shader.cpp.o"
   "CMakeFiles/a1.dir/cgra/wavefront.cpp.o"

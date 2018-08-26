@@ -330,6 +330,18 @@
 		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/parser.hpp">
 			<Option target="a1"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/printer.cpp">
+			<Option target="a1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/printer.h">
+			<Option target="a1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/skeleton.cpp">
+			<Option target="a1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/src/skeleton.hpp">
+			<Option target="a1"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Daniel/workspace/cgra350/cgra-350-assignment-2/work/vendor/glew/include/GL/glew.h">
 			<Option target="glew"/>
 		</Unit>

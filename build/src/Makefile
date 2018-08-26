@@ -386,6 +386,60 @@ parser.cpp.s:
 	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/parser.cpp.s
 .PHONY : parser.cpp.s
 
+printer.obj: printer.cpp.obj
+
+.PHONY : printer.obj
+
+# target to build an object file
+printer.cpp.obj:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/printer.cpp.obj
+.PHONY : printer.cpp.obj
+
+printer.i: printer.cpp.i
+
+.PHONY : printer.i
+
+# target to preprocess a source file
+printer.cpp.i:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/printer.cpp.i
+.PHONY : printer.cpp.i
+
+printer.s: printer.cpp.s
+
+.PHONY : printer.s
+
+# target to generate assembly for a file
+printer.cpp.s:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/printer.cpp.s
+.PHONY : printer.cpp.s
+
+skeleton.obj: skeleton.cpp.obj
+
+.PHONY : skeleton.obj
+
+# target to build an object file
+skeleton.cpp.obj:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/skeleton.cpp.obj
+.PHONY : skeleton.cpp.obj
+
+skeleton.i: skeleton.cpp.i
+
+.PHONY : skeleton.i
+
+# target to preprocess a source file
+skeleton.cpp.i:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/skeleton.cpp.i
+.PHONY : skeleton.cpp.i
+
+skeleton.s: skeleton.cpp.s
+
+.PHONY : skeleton.s
+
+# target to generate assembly for a file
+skeleton.cpp.s:
+	cd /d C:\Users\Daniel\workspace\cgra350\cgra-350-assignment-2\build && $(MAKE) -f src\CMakeFiles\a1.dir\build.make src/CMakeFiles/a1.dir/skeleton.cpp.s
+.PHONY : skeleton.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -423,6 +477,12 @@ help:
 	@echo ... parser.obj
 	@echo ... parser.i
 	@echo ... parser.s
+	@echo ... printer.obj
+	@echo ... printer.i
+	@echo ... printer.s
+	@echo ... skeleton.obj
+	@echo ... skeleton.i
+	@echo ... skeleton.s
 .PHONY : help
 
 

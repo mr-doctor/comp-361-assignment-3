@@ -26,7 +26,7 @@ namespace cgra {
 		}
 
 		bool is_root;
-//		Bone parent = nullptr;
+//		Bone parent = NULL;
 		std::vector<Bone> children;
 
 		int id;

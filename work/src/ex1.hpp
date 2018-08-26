@@ -5,6 +5,7 @@
 #include "cgra/shader.hpp"
 
 #include "glm/glm.hpp"
+#include "skeleton.hpp"
 
 class Application {
 public:
@@ -12,7 +13,7 @@ public:
     GLFWwindow *m_window;
 
     // The shader program used for drawing
-    cgra::Program m_program;
+    static cgra::Program m_program;
     // The mesh data
     cgra::Mesh m_mesh;
 
@@ -71,17 +72,16 @@ public:
 
 	void set_shaders(const char *vertex, const char *fragment);
 
-	cgra::Bone parse_asf(const char *filename);
+	Skeleton m_skeleton = Skeleton("");
 
-	int parse_id(std::string line);
+	cgra::Mesh loadObj(const char *filename);
 
-	std::string parse_name(std::string line);
+	static cgra::Mesh m_bone_mesh;
+	static cgra::Mesh m_sphere_mesh;
 
-	glm::vec3 parse_direction(std::string line);
+	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
+	                 glm::vec3 global_scale, glm::mat4 global_rotation);
 
-	float parse_length(std::string line);
-
-	std::array<bool, 3> parse_dof(std::string line);
-
-	glm::vec3 parse_axes(std::string line);
+	static void draw_sphere(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
+	                        glm::vec3 global_scale, glm::mat4 global_rotation);
 };
