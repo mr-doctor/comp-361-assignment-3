@@ -74,14 +74,21 @@ public:
 
 	Skeleton m_skeleton = Skeleton("");
 
-	cgra::Mesh loadObj(const char *filename);
+	cgra::Mesh loadObj(const char *filename, int id);
 
 	static cgra::Mesh m_bone_mesh;
 	static cgra::Mesh m_sphere_mesh;
+	static cgra::Mesh m_arrow_x_mesh;
+	static cgra::Mesh m_arrow_y_mesh;
+	static cgra::Mesh m_arrow_z_mesh;
 
-	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
+	static void draw_bone(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate,
+	                      glm::vec3 global_translation,
+	                      glm::vec3 global_scale, glm::mat4 global_rotation);
+
+	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate,
+	                 glm::vec3 global_translation,
 	                 glm::vec3 global_scale, glm::mat4 global_rotation);
 
-	static void draw_sphere(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
-	                        glm::vec3 global_scale, glm::mat4 global_rotation);
+
 };

@@ -17,8 +17,10 @@ namespace cgra {
             // The normal at the vertex
             glm::vec3 m_normal;
 
-            Vertex(glm::vec3 pos, glm::vec3 norm) :
-                m_position(pos), m_normal(norm) { }
+            glm::vec3 m_colour;
+
+            Vertex(glm::vec3 pos, glm::vec3 norm, glm::vec3 colour) :
+                m_position(pos), m_normal(norm), m_colour(colour){ }
         };
 
         // A list of all the vertices in the mesh
@@ -60,7 +62,8 @@ namespace cgra {
         // `triangles` is an n x 3 matrix of triangles using
         //    indices into the rows of `vertices`
         void setData(const Matrix<double> &vertices,
-                     const Matrix<unsigned int> &triangles);
+                     const Matrix<unsigned int> &triangles,
+                     const glm::vec3 &colour);
 
         // Set whether or not to draw this mesh as a wireframe.
         // true means that the mesh will be drawn as a wireframe.

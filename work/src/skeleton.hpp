@@ -116,5 +116,5 @@ public:
 
 	// YOUR CODE GOES HERE
 	// ...
-	void renderBone(bone *bone, glm::vec3 position, glm::vec3 global_translation, glm::vec3 global_scale, glm::mat4 global_rotation);
+	void renderBone(bone *bone, glm::vec3 position, glm::mat4 rotation, glm::vec3 global_translation, glm::vec3 global_scale, glm::mat4 global_rotation);
 };

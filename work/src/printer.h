@@ -19,6 +19,8 @@ public:
 	static void print(glm::vec3 vector);
 
 	static void print(const std::string &string);
+
+	static void print(glm::mat4 matrix);
 };
 
 

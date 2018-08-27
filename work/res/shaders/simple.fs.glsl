@@ -4,16 +4,18 @@ out vec4 color;
 
 in vec3 fragPosition;
 in vec3 fragNormal;
+in vec3 object_colour;
 
 const vec3 lightDir = vec3(0.25, 0.25, -1);
 
-const vec3 ambientColor = vec3(0.5, 0.5, 0.5);
-const vec3 diffuseColor = vec3(0.4, 0.4, 0.4);
-const vec3 specColor    = vec3(0.2, 0.1, 0.1);
+const vec3 specColor    = vec3(0.2, 0.0, 0.0);
 
 const float shininess = 16.0;
 
 void main() {
+
+    vec3 ambientColor = object_colour;
+    vec3 diffuseColor = object_colour;
     vec3 normal = normalize(fragNormal);
     vec3 lightDir = normalize(-lightDir);
 

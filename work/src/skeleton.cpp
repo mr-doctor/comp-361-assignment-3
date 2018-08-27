@@ -82,22 +82,7 @@ void Skeleton::renderSkeleton(glm::vec3 global_translation,
                               glm::vec3 global_scale,
                               glm::mat4 global_rotation) {
 
-/*	//*** glMatrixMode is a deprecated function that should
-	//*** not be used in modern OpenGL - you need to manage
-	//*** your matrices yourself
-	glMatrixMode(GL_MODELVIEW);*/
-
-	/*//*** glPushMatrix is a deprecated function that you will
-	//*** not use in modern OpenGL because modern OpenGL expects
-	//*** you to manage the matrices yourself
-	glPushMatrix();*/
-
-	//Actually draw the skeleton
-	renderBone(&m_bones[0], glm::vec3(0), global_translation, global_scale, global_rotation);
-	/*// Clean up
-	//*** glPopMatrix is a deprecated function that is the
-	//*** partner of glPushMatrix (see above)
-	glPopMatrix();*/
+	renderBone(&m_bones[0], glm::vec3(0), glm::mat4(1), global_translation, global_scale, global_rotation);
 }
 
 
@@ -114,20 +99,47 @@ void Skeleton::renderSkeleton(glm::vec3 global_translation,
 //-------------------------------------------------------------
 void Skeleton::renderBone(bone *bone,
                           glm::vec3 position,
+                          glm::mat4 rotation,
                           glm::vec3 global_translation,
                           glm::vec3 global_scale,
                           glm::mat4 global_rotation) {
 
-	Application::draw_sphere(Application::m_sphere_mesh, position, glm::vec3(1.2f * 0.1f), glm::mat4(1), global_translation, global_scale, global_rotation);
+	Application::draw(Application::m_sphere_mesh, position, glm::vec3(1.2f * 0.1f), glm::mat4(1), global_translation,
+	                  global_scale, global_rotation);
 
-	if (bone->name != "root") {
-		glm::mat4 align = glm::inverse(glm::lookAt(position, position - bone->boneDir, glm::vec3(0, 1, 0)));
-		Application::draw(Application::m_bone_mesh, position, glm::vec3(1, 1, bone->length * 5.0f),
-		                  align, global_translation, global_scale, global_rotation);
-	}
 	glm::vec3 new_pos = position + bone->boneDir * bone->length * 5.0f;
+//	printer::print(rotation);
+//	printer::print("\n");
+	if (bone->name != "root") {
+
+		Application::draw_bone(Application::m_arrow_x_mesh,
+		                  position,
+		                  glm::vec3(0.5),
+		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 1, 0)),
+		                  global_translation,
+		                  global_scale,
+		                  global_rotation);
+		Application::draw_bone(Application::m_arrow_y_mesh,
+		                  position,
+		                  glm::vec3(0.5),
+		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 0, 1)),
+		                  global_translation,
+		                  global_scale,
+		                  global_rotation);
+		Application::draw_bone(Application::m_arrow_z_mesh,
+		                  position,
+		                  glm::vec3(0.5),
+		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(1, 0, 0)),
+		                  global_translation,
+		                  global_scale,
+		                  global_rotation);
+
+		Application::draw_bone(Application::m_bone_mesh, position, glm::vec3(1, 1, bone->length * 5.0f),
+		                       rotation, global_translation, global_scale, global_rotation);
+	}
 	for (auto &child : bone->children) {
-		renderBone(child, new_pos, global_translation, global_scale, global_rotation);
+		glm::mat4 align = glm::inverse(glm::lookAt(new_pos, new_pos - child->boneDir, glm::vec3(0, 1, 0)));
+		renderBone(child, new_pos, align, global_translation, global_scale, global_rotation);
 	}
 
 }
@@ -436,6 +448,7 @@ void Skeleton::readHierarchy(ifstream &file) {
 // Complete the following method to load data from an *.amc file
 //-------------------------------------------------------------
 void Skeleton::readAMC(string filename) {
+	printer::print(filename);
 	// YOUR CODE GOES HERE
 	// ...
 

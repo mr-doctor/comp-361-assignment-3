@@ -7,7 +7,8 @@
 namespace cgra {
 
     void Mesh::setData(const Matrix<double> &vertices,
-                       const Matrix<unsigned int> &triangles) {
+                       const Matrix<unsigned int> &triangles,
+                       const glm::vec3 &colour) {
         // Check to make sure that the number of columns in `vertices`
         // and `triangles` is correct
         if (vertices.numCols() != 3) {
@@ -31,7 +32,8 @@ namespace cgra {
             // Create the vertex
             Vertex v(
                 glm::vec3(vert[0], vert[1], vert[2]),
-                glm::vec3(0) // Normal is zero here
+                glm::vec3(0), // Normal is zero here
+		        colour
             );
 
             // Add the vertex to m_vertices
@@ -127,6 +129,11 @@ namespace cgra {
             glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                                   reinterpret_cast<void *>(offsetof(Vertex, m_normal)));
             glEnableVertexAttribArray(1);
+
+	        // Attribute 1 is the position.
+	        glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex),
+	                              reinterpret_cast<void *>(offsetof(Vertex, m_colour)));
+	        glEnableVertexAttribArray(2);
         }
 
         // Set the appropriate polygon mode for the drawing mode

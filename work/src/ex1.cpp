@@ -28,6 +28,10 @@
 cgra::Program Application::m_program;
 cgra::Mesh Application::m_bone_mesh;
 cgra::Mesh Application::m_sphere_mesh;
+cgra::Mesh Application::m_arrow_x_mesh;
+cgra::Mesh Application::m_arrow_y_mesh;
+cgra::Mesh Application::m_arrow_z_mesh;
+
 
 void Application::init() {
 
@@ -41,13 +45,16 @@ void Application::init() {
 	m_rotationMatrix = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(rotation[0], rotation[1], rotation[2]));
 
 	m_skeleton = Skeleton(CGRA_SRCDIR "/res/models/priman.asf");
-	m_bone_mesh = loadObj(CGRA_SRCDIR "/res/models/frustrum-small.obj");
-	m_sphere_mesh = loadObj(CGRA_SRCDIR "/res/models/sphere.obj");
+	m_bone_mesh = loadObj(CGRA_SRCDIR "/res/models/frustrum-small.obj", -2);
+	m_sphere_mesh = loadObj(CGRA_SRCDIR "/res/models/sphere.obj", -1);
+	m_arrow_x_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 0);
+	m_arrow_y_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 1);
+	m_arrow_z_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 2);
 
 	printer::print(m_skeleton);
 }
 
-cgra::Mesh Application::loadObj(const char *filename) {
+cgra::Mesh Application::loadObj(const char *filename, int id) {
 	std::ifstream obj_file(filename);
 	if (!obj_file.is_open()) {
 		std::cerr << "File not open\n";
@@ -56,8 +63,21 @@ cgra::Mesh Application::loadObj(const char *filename) {
 		cgra::Matrix<double> vertices(0, 3);
 		cgra::Matrix<unsigned int> triangles(0, 3);
 		cgra::Mesh empty_mesh;
-		empty_mesh.setData(vertices, triangles);
+		empty_mesh.setData(vertices, triangles, glm::vec3(0));
 		return empty_mesh;
+	}
+
+	glm::vec3 colour(0.0, 1.0, 0.0);
+	if (id == -2) {
+		colour = {0.4, 0.4, 0.4};
+	} else if (id == -1) {
+		colour = {0.0, 1.0, 1.0};
+	} else if (id == 0) {
+		colour = {1.0, 0.0, 0.0};
+	} else if (id == 1) {
+		colour = {0.0, 1.0, 0.0};
+	} else if (id == 2) {
+		colour = {0.0, 0.0, 1.0};
 	}
 
 	unsigned int num_vertices = 0;
@@ -121,7 +141,8 @@ cgra::Mesh Application::loadObj(const char *filename) {
 
 	obj_file.close();
 	cgra::Mesh new_mesh;
-	new_mesh.setData(vertices, triangles);
+
+	new_mesh.setData(vertices, triangles, colour);
 	// Create and return a new mesh
 	return new_mesh;
 }
@@ -196,17 +217,16 @@ void Application::drawScene() {
 //	m_mesh.draw();
 }
 
-void Application::draw_sphere(cgra::Mesh mesh,
-                              glm::vec3 position,
-                              glm::vec3 scale,
-                              glm::mat4 rotate,
-                              glm::vec3 global_translation,
-                              glm::vec3 global_scale,
-                              glm::mat4 global_rotation) {
-
+void Application::draw(cgra::Mesh mesh,
+                       glm::vec3 position,
+                       glm::vec3 scale,
+                       glm::mat4 rotate,
+                       glm::vec3 global_translation,
+                       glm::vec3 global_scale,
+                       glm::mat4 global_rotation) {
 	glm::mat4 model_transform(1.0f);
 
-	model_transform = glm::translate(model_transform, global_translation);
+	model_transform = glm::translate(model_transform, glm::vec3(0, 0, 0));
 
 	// Scale so that translation works properly
 	model_transform = glm::scale(model_transform, glm::vec3(global_scale));
@@ -222,17 +242,19 @@ void Application::draw_sphere(cgra::Mesh mesh,
 	model_transform = glm::scale(model_transform, scale);
 
 	m_program.setModelMatrix(model_transform);
+
 	mesh.draw();
+
 }
 
 
-void Application::draw(cgra::Mesh mesh,
-                       glm::vec3 position,
-                       glm::vec3 scale,
-                       glm::mat4 rotate,
-                       glm::vec3 global_translation,
-                       glm::vec3 global_scale,
-                       glm::mat4 global_rotation) {
+void Application::draw_bone(cgra::Mesh mesh,
+                            glm::vec3 position,
+                            glm::vec3 scale,
+                            glm::mat4 rotate,
+                            glm::vec3 global_translation,
+                            glm::vec3 global_scale,
+                            glm::mat4 global_rotation) {
 
 	glm::mat4 model_transform(1.0f);
 
@@ -250,11 +272,12 @@ void Application::draw(cgra::Mesh mesh,
 	model_transform = glm::scale(model_transform, scale);
 
 	m_program.setModelMatrix(model_transform);
+
 	mesh.draw();
 }
 
 void Application::doGUI() {
-	ImGui::SetNextWindowSize(ImVec2(450, 450), ImGuiSetCond_FirstUseEver);
+	/*ImGui::SetNextWindowSize(ImVec2(450, 450), ImGuiSetCond_FirstUseEver);
 	ImGui::Begin("Shapes");
 
 	// Example for rotation, use glm to create a a rotation
@@ -265,7 +288,7 @@ void Application::doGUI() {
 		m_rotationMatrix = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(rotation[0], rotation[1], rotation[2]));
 	}
 
-	ImGui::End();
+	ImGui::End();*/
 }
 
 
@@ -315,4 +338,5 @@ void Application::onScroll(double xoffset, double yoffset) {
 	} else if (yoffset < 0) {
 		m_scale = (float) std::max(m_scale - 0.1, 0.05);
 	}
+
 }
