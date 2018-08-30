@@ -116,9 +116,9 @@ void Skeleton::renderBoneCompletion(bone *bone, glm::mat4 model_transform) {
 		for (float f=0; f < 1.0f; f += 0.1){
 			Application::draw(Application::m_bone_segment_mesh, glm::vec3(0.02), glm::translate(model_transform, newDir * bone->length * f));
 		}
-		glm::quat rotate = glm::rotation(glm::vec3(0, 0, 1), newDir);
+		/*glm::quat rotate = glm::rotation(glm::vec3(0, 0, 1), newDir);
 		glm::mat4 drawT = model_transform;
-		drawT = glm::rotate(drawT, rotate.w, glm::vec3(rotate.x, rotate.y, rotate.z));
+		drawT = glm::rotate(drawT, rotate.w, glm::vec3(rotate.x, rotate.y, rotate.z));*/
 	}
 
 	model_transform = glm::translate(model_transform, newDir * bone->length);

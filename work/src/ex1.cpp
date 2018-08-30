@@ -62,7 +62,7 @@ void Application::init() {
 //		glm::vec3 angle = glm::angle(glm::vec3(0., 0., -1.), b.boneDir);
 //		b.rotate = glm::eulerAngleXYZ(glm::radians(angle.x), glm::radians(angle.y), glm::radians(angle.z));
 //		glm::quat.angle()
-		std::cout << glm::to_string(b.boneDir) << "=>" << glm::to_string(b.rotate) << std::endl;
+//		std::cout << glm::to_string(b.boneDir) << "=>" << glm::to_string(b.rotate) << std::endl;
 	}
 
 	printer::print(m_skeleton);
