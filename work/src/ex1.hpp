@@ -82,13 +82,25 @@ public:
 	static cgra::Mesh m_arrow_y_mesh;
 	static cgra::Mesh m_arrow_z_mesh;
 
-	static void draw_bone(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate,
+	static void draw_bone(cgra::Mesh mesh, glm::vec3 scale, glm::mat4 rotate,
 	                      glm::vec3 global_translation,
 	                      glm::vec3 global_scale, glm::mat4 global_rotation);
 
-	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate,
-	                 glm::vec3 global_translation,
-	                 glm::vec3 global_scale, glm::mat4 global_rotation);
+	static void draw(cgra::Mesh mesh, glm::vec3 scale, glm::mat4 model_transform);
 
 
+	static cgra::Mesh m_bone_segment_mesh;
+
+	void do_walking();
+
+	void do_sitting();
+
+	void do_dancing();
+
+	void do_T();
+
+	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
+					 glm::vec3 global_scale, glm::mat4 global_rotation);
+
+	bool core;
 };

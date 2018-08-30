@@ -22,12 +22,15 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtx/euler_angles.hpp"
+#include "glm/gtx/vector_angle.hpp"
 #include "skeleton.hpp"
 #include "printer.h"
+#include <glm/gtx/string_cast.hpp>
 
 cgra::Program Application::m_program;
 cgra::Mesh Application::m_bone_mesh;
 cgra::Mesh Application::m_sphere_mesh;
+cgra::Mesh Application::m_bone_segment_mesh;
 cgra::Mesh Application::m_arrow_x_mesh;
 cgra::Mesh Application::m_arrow_y_mesh;
 cgra::Mesh Application::m_arrow_z_mesh;
@@ -46,10 +49,21 @@ void Application::init() {
 
 	m_skeleton = Skeleton(CGRA_SRCDIR "/res/models/priman.asf");
 	m_bone_mesh = loadObj(CGRA_SRCDIR "/res/models/frustrum-small.obj", -2);
+	m_bone_segment_mesh = loadObj(CGRA_SRCDIR "/res/models/sphere.obj", -2);
 	m_sphere_mesh = loadObj(CGRA_SRCDIR "/res/models/sphere.obj", -1);
 	m_arrow_x_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 0);
 	m_arrow_y_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 1);
 	m_arrow_z_mesh = loadObj(CGRA_SRCDIR "/res/models/arrow.obj", 2);
+
+	for (int i = 0; i < m_skeleton.m_bones.size(); ++i) {
+		bone b = m_skeleton.m_bones[i];
+		b.rotate = glm::lookAt(glm::vec3(0, 0, -1 ), b.boneDir, glm::vec3(0, 1, 0));
+		b.rotate[0][0] += 1;
+//		glm::vec3 angle = glm::angle(glm::vec3(0., 0., -1.), b.boneDir);
+//		b.rotate = glm::eulerAngleXYZ(glm::radians(angle.x), glm::radians(angle.y), glm::radians(angle.z));
+//		glm::quat.angle()
+		std::cout << glm::to_string(b.boneDir) << "=>" << glm::to_string(b.rotate) << std::endl;
+	}
 
 	printer::print(m_skeleton);
 }
@@ -183,7 +197,7 @@ void Application::apply_arcball(glm::vec2 current_mouse_XY) {
 		return;
 	}
 	// Invert the matrix for camera coordinates
-	glm::mat4 arcball_rotate = glm::inverse(glm::rotate(glm::mat4(), angle / -50, normal));
+	glm::mat4 arcball_rotate = glm::inverse(glm::rotate(glm::mat4(), angle / -20, normal));
 	// Apply matrix
 	arcball_rotate *= m_rotationMatrix;
 	m_rotationMatrix = arcball_rotate;
@@ -209,21 +223,20 @@ void Application::drawScene() {
 	 *    `glm::scale`                                          *
 	 ************************************************************/
 
+	glm::mat4 model_transform(1.0f);
+	model_transform *= m_rotationMatrix;
 
-	m_skeleton.renderSkeleton(m_translation, glm::vec3(m_scale), m_rotationMatrix);
+	m_skeleton.renderSkeleton(model_transform, m_translation, glm::vec3(m_scale), m_rotationMatrix, core);
 
-	// Draw the mesh
-//	draw(m_bone_mesh, glm::vec3(0, 0, 0), glm::vec3(2, 2, 5), glm::mat4(1));
-//	m_mesh.draw();
 }
 
 void Application::draw(cgra::Mesh mesh,
-                       glm::vec3 position,
-                       glm::vec3 scale,
-                       glm::mat4 rotate,
-                       glm::vec3 global_translation,
-                       glm::vec3 global_scale,
-                       glm::mat4 global_rotation) {
+					   glm::vec3 position,
+					   glm::vec3 scale,
+					   glm::mat4 rotate,
+					   glm::vec3 global_translation,
+					   glm::vec3 global_scale,
+					   glm::mat4 global_rotation) {
 	glm::mat4 model_transform(1.0f);
 
 	model_transform = glm::translate(model_transform, glm::vec3(0, 0, 0));
@@ -247,14 +260,12 @@ void Application::draw(cgra::Mesh mesh,
 
 }
 
-
 void Application::draw_bone(cgra::Mesh mesh,
-                            glm::vec3 position,
-                            glm::vec3 scale,
-                            glm::mat4 rotate,
-                            glm::vec3 global_translation,
-                            glm::vec3 global_scale,
-                            glm::mat4 global_rotation) {
+							glm::vec3 scale,
+							glm::mat4 rotate,
+							glm::vec3 global_translation,
+							glm::vec3 global_scale,
+							glm::mat4 global_rotation) {
 
 	glm::mat4 model_transform(1.0f);
 
@@ -276,19 +287,115 @@ void Application::draw_bone(cgra::Mesh mesh,
 	mesh.draw();
 }
 
+void Application::draw(cgra::Mesh mesh, glm::vec3 scale, glm::mat4 model_transform) {
+
+	model_transform *= glm::scale(model_transform, scale);
+
+	m_program.setModelMatrix(model_transform);
+
+	mesh.draw();
+}
+
+void Application::do_T() {
+	for (size_t i = 0; i < m_skeleton.m_bones.size(); ++i) {
+		m_skeleton.m_bones[i].rotation = glm::vec3(0, 0, 0);
+	}
+}
+
+void Application::do_walking() {
+	m_skeleton.m_bones[m_skeleton.findBone("rfemur")].rotation = glm::vec3(-120.0f, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("rtibia")].rotation = glm::vec3(10.0f, 0, 20);
+	m_skeleton.m_bones[m_skeleton.findBone("rfoot")].rotation = glm::vec3(-40.0f, 0, 20);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lfemur")].rotation = glm::vec3(0.0f, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("ltibia")].rotation = glm::vec3(20.0f, 0, -20);
+	m_skeleton.m_bones[m_skeleton.findBone("lfoot")].rotation = glm::vec3(90.0f, 0, -20);
+
+	m_skeleton.m_bones[m_skeleton.findBone("rhumerus")].rotation = glm::vec3(-90, 0, -90.0f);
+	m_skeleton.m_bones[m_skeleton.findBone("rradius")].rotation = glm::vec3(10.0f, 0, 70);
+	m_skeleton.m_bones[m_skeleton.findBone("rwrist")].rotation = glm::vec3(0, 0, 60);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lhumerus")].rotation = glm::vec3(90, 0, 90.0f);
+	m_skeleton.m_bones[m_skeleton.findBone("lradius")].rotation = glm::vec3(10.0f, 0, 70);
+	m_skeleton.m_bones[m_skeleton.findBone("lwrist")].rotation = glm::vec3(0, 0, 60);
+	m_skeleton.m_bones[m_skeleton.findBone("lhand")].rotation = glm::vec3(0, 0, 60);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lowerback")].rotation = glm::vec3(25, 0, 0);
+}
+
+void Application::do_sitting() {
+	m_skeleton.m_bones[m_skeleton.findBone("rfemur")].rotation = glm::vec3(-120.0f, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("rtibia")].rotation = glm::vec3(10.0f, 0, 20);
+	m_skeleton.m_bones[m_skeleton.findBone("rfoot")].rotation = glm::vec3(-40.0f, 0, 20);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lfemur")].rotation = glm::vec3(-120.0f, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("ltibia")].rotation = glm::vec3(-40, 0, -20);
+	m_skeleton.m_bones[m_skeleton.findBone("lfoot")].rotation = glm::vec3(-40.0f, 0, -20);
+
+	m_skeleton.m_bones[m_skeleton.findBone("rhumerus")].rotation = glm::vec3(0, 0, 90.0f);
+	m_skeleton.m_bones[m_skeleton.findBone("rradius")].rotation = glm::vec3(10.0f, 0, 90);
+	m_skeleton.m_bones[m_skeleton.findBone("rwrist")].rotation = glm::vec3(0, 0, 60);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lclavicle")].rotation = glm::vec3(0, -30, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("lhumerus")].rotation = glm::vec3(-90, 0, -70.0f);
+	m_skeleton.m_bones[m_skeleton.findBone("lradius")].rotation = glm::vec3(0, 65, 70);
+	m_skeleton.m_bones[m_skeleton.findBone("lwrist")].rotation = glm::vec3(0, 0, 60);
+	m_skeleton.m_bones[m_skeleton.findBone("lhand")].rotation = glm::vec3(0, 0, 60);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lowerback")].rotation = glm::vec3(10, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("thorax")].rotation = glm::vec3(-10, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("upperback")].rotation = glm::vec3(-10, 0, 0);
+}
+
+void Application::do_dancing() {
+	m_skeleton.m_bones[m_skeleton.findBone("rfemur")].rotation = glm::vec3(-10.0f, 0, -70);
+	m_skeleton.m_bones[m_skeleton.findBone("rtibia")].rotation = glm::vec3(-10.0f, 0, 90);
+	m_skeleton.m_bones[m_skeleton.findBone("rfoot")].rotation = glm::vec3(90.0f, 0, -90);
+	m_skeleton.m_bones[m_skeleton.findBone("rtoes")].rotation = glm::vec3(90.0f, 0, -90);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lfemur")].rotation = glm::vec3(0.0f, -40, -15);
+	m_skeleton.m_bones[m_skeleton.findBone("ltibia")].rotation = glm::vec3(0, 0, -20);
+	m_skeleton.m_bones[m_skeleton.findBone("lfoot")].rotation = glm::vec3(80.0f, 0, 0);
+
+	m_skeleton.m_bones[m_skeleton.findBone("rhumerus")].rotation = glm::vec3(0, 0, -90);
+	m_skeleton.m_bones[m_skeleton.findBone("rradius")].rotation = glm::vec3(0, 0, -90);
+	m_skeleton.m_bones[m_skeleton.findBone("rwrist")].rotation = glm::vec3(0, 0, -90);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lhumerus")].rotation = glm::vec3(0, 0, 45);
+	m_skeleton.m_bones[m_skeleton.findBone("lradius")].rotation = glm::vec3(0, 180, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("lwrist")].rotation = glm::vec3(0, 0, 180);
+
+	m_skeleton.m_bones[m_skeleton.findBone("lowerback")].rotation = glm::vec3(-10, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("thorax")].rotation = glm::vec3(-10, 0, 0);
+	m_skeleton.m_bones[m_skeleton.findBone("upperback")].rotation = glm::vec3(-10, 0, 0);
+}
+
+int pose = 0;
+
 void Application::doGUI() {
-	/*ImGui::SetNextWindowSize(ImVec2(450, 450), ImGuiSetCond_FirstUseEver);
+	ImGui::SetNextWindowSize(ImVec2(450, 450), ImGuiSetCond_FirstUseEver);
 	ImGui::Begin("Shapes");
 
-	// Example for rotation, use glm to create a a rotation
-	// matrix from this vector
-	static glm::vec3 rotation(0.0f, 0.0f, 0.0f);
-	if (ImGui::InputFloat3("Rotation", &rotation[0])) {
-		// This block is executed if the input changes
-		m_rotationMatrix = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(rotation[0], rotation[1], rotation[2]));
+	ImGui::Checkbox("Display Core", &core);
+
+
+	if (ImGui::Button("Cycle Poses")) {
+		pose++;
+		if (pose > 3) {
+			pose = 0;
+		}
+	}
+	if (pose == 0) {
+		do_T();
+	} else if (pose == 1) {
+		do_walking();
+	} else if (pose == 2) {
+		do_sitting();
+	} else if (pose == 3) {
+		do_dancing();
 	}
 
-	ImGui::End();*/
+	ImGui::End();
 }
 
 

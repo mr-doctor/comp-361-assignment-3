@@ -36,6 +36,7 @@
 //
 //----------------------------------------------------------------------------
 
+#define GLM_SWIZZLE
 #include <cmath>
 #include <iostream>
 #include <fstream>
@@ -45,6 +46,9 @@
 #include <cgra/bone.hpp>
 #include <cgra/mesh.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtx/euler_angles.hpp>
+#include <glm/gtx/string_cast.hpp>
+#include <glm/gtx/quaternion.hpp>
 
 
 //*** COMP308 had its own math and geometry libraries. CGRA350 students are
@@ -78,11 +82,16 @@ Skeleton::Skeleton(string filename) {
 // [Assignment 2] :
 // You may need to revise this function for Completion/Challenge
 //-------------------------------------------------------------
-void Skeleton::renderSkeleton(glm::vec3 global_translation,
-                              glm::vec3 global_scale,
-                              glm::mat4 global_rotation) {
+void Skeleton::renderSkeleton(glm::mat4 model_transform,
+							  glm::vec3 global_translation,
+							  glm::vec3 global_scale,
+							  glm::mat4 global_rotation, bool core) {
 
-	renderBone(&m_bones[0], glm::vec3(0), glm::mat4(1), global_translation, global_scale, global_rotation);
+	if (core) {
+		renderBoneCore(&m_bones[0], glm::vec3(0), glm::mat4(1), global_translation, global_scale, global_rotation);
+	} else {
+		renderBoneCompletion(&m_bones[0], model_transform);
+	}
 }
 
 
@@ -97,51 +106,67 @@ void Skeleton::renderSkeleton(glm::vec3 global_translation,
 // Should not draw the root bone (because it has zero length)
 // but should go on to draw its children
 //-------------------------------------------------------------
-void Skeleton::renderBone(bone *bone,
-                          glm::vec3 position,
-                          glm::mat4 rotation,
-                          glm::vec3 global_translation,
-                          glm::vec3 global_scale,
-                          glm::mat4 global_rotation) {
+void Skeleton::renderBoneCompletion(bone *bone, glm::mat4 model_transform) {
+
+	Application::draw(Application::m_sphere_mesh, glm::vec3(0.05f), model_transform);
+
+	glm::mat4 newRot = glm::eulerAngleXYZ(glm::radians(bone->rotation.x), glm::radians(bone->rotation.y), glm::radians(bone->rotation.z));
+	glm::vec3 newDir = (newRot * glm::vec4(bone->boneDir, 1)).xyz();
+	if (bone->name != "root") {
+		for (float f=0; f < 1.0f; f += 0.1){
+			Application::draw(Application::m_bone_segment_mesh, glm::vec3(0.02), glm::translate(model_transform, newDir * bone->length * f));
+		}
+		glm::quat rotate = glm::rotation(glm::vec3(0, 0, 1), newDir);
+		glm::mat4 drawT = model_transform;
+		drawT = glm::rotate(drawT, rotate.w, glm::vec3(rotate.x, rotate.y, rotate.z));
+	}
+
+	model_transform = glm::translate(model_transform, newDir * bone->length);
+	for (auto &child : bone->children) {
+		glm::mat4 child_transform = model_transform;
+		renderBoneCompletion(child, child_transform);
+	}
+}
+
+void Skeleton::renderBoneCore(bone *bone,
+							  glm::vec3 position,
+							  glm::mat4 rotation,
+							  glm::vec3 global_translation,
+							  glm::vec3 global_scale,
+							  glm::mat4 global_rotation) {
 
 	Application::draw(Application::m_sphere_mesh, position, glm::vec3(1.2f * 0.1f), glm::mat4(1), global_translation,
-	                  global_scale, global_rotation);
+					  global_scale, global_rotation);
 
 	glm::vec3 new_pos = position + bone->boneDir * bone->length * 5.0f;
-//	printer::print(rotation);
-//	printer::print("\n");
 	if (bone->name != "root") {
 
 		Application::draw_bone(Application::m_arrow_x_mesh,
-		                  position,
-		                  glm::vec3(0.5),
-		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 1, 0)),
-		                  global_translation,
-		                  global_scale,
-		                  global_rotation);
+							   glm::vec3(0.5),
+							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 1, 0)),
+							   global_translation,
+							   global_scale,
+							   global_rotation);
 		Application::draw_bone(Application::m_arrow_y_mesh,
-		                  position,
-		                  glm::vec3(0.5),
-		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 0, 1)),
-		                  global_translation,
-		                  global_scale,
-		                  global_rotation);
+							   glm::vec3(0.5),
+							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 0, 1)),
+							   global_translation,
+							   global_scale,
+							   global_rotation);
 		Application::draw_bone(Application::m_arrow_z_mesh,
-		                  position,
-		                  glm::vec3(0.5),
-		                  rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(1, 0, 0)),
-		                  global_translation,
-		                  global_scale,
-		                  global_rotation);
+							   glm::vec3(0.5),
+							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(1, 0, 0)),
+							   global_translation,
+							   global_scale,
+							   global_rotation);
 
-		Application::draw_bone(Application::m_bone_mesh, position, glm::vec3(1, 1, bone->length * 5.0f),
-		                       rotation, global_translation, global_scale, global_rotation);
+		Application::draw_bone(Application::m_bone_mesh, glm::vec3(1, 1, bone->length * 5.0f),
+							   rotation, global_translation, global_scale, global_rotation);
 	}
 	for (auto &child : bone->children) {
 		glm::mat4 align = glm::inverse(glm::lookAt(new_pos, new_pos - child->boneDir, glm::vec3(0, 1, 0)));
-		renderBone(child, new_pos, align, global_translation, global_scale, global_rotation);
+		renderBoneCore(child, new_pos, align, global_translation, global_scale, global_rotation);
 	}
-
 }
 
 
