@@ -1,46 +1,69 @@
+class Item:
+
+	def __init__(self, w, v):
+		self.weight = w
+		self.value = v
+
+	def __str__(self):
+		return "(W:" + self.weight.__str__() + ", V:" + self.value.__str__() + ")"
+
+	def __repr__(self):
+		return self.__str__()
+
 class Brute:
 
-	def __init__(self, n):
+	def __init__(self, items, max_weight):
+		self.items = items
+		self.max_weight = max_weight
 		self.potential = []
-		array = [i for i in range(n)]
-		self.permute(array, 0, n-1)
 
-	def permute(self, array, cursor_start, cursor_end):
-		if cursor_start == cursor_end:
+	def generate_permutations(self, array):
+		w = self.weight(array)
+		if w == self.max_weight:
 			self.potential.append(array.copy())
-			# print(self.potential[len(self.potential) - 1])
-		else:
-			for i in range(cursor_start, cursor_end + 1):
-				array[cursor_start], array[i] = array[i], array[cursor_start]
-				self.permute(array, cursor_start + 1, cursor_end)
-				array[cursor_start], array[i] = array[i], array[cursor_start]
+		count = 0
+		for i in self.items:
+			if count == len(self.items) - 1:
+				self.potential.append(array.copy())
+				return
+			if w + i.weight <= self.max_weight:
+				arr2 = array.copy()
+				arr2.append(i)
+				self.generate_permutations(arr2)
+			else:
+				count += 1
 
-	def knapsack(self, w, v, W):
-		value = 0
-		for i in range(len(self.potential)):
-			current_val = self.value(self.potential[i], v)
-			if self.weight(self.potential[i], w) <= W and current_val > value:
-				value = current_val
-		return value
-
-	def weight(self, array, weights):
+	def weight(self, array):
 		total = 0
-		for i in array:
-			total += weights[array[i]]
+		for a in array:
+			total += a.weight
 		return total
 
-	def value(self, array, values):
+	def knapsack(self):
+		best = []
+		for p in self.potential:
+			value = self.value(p)
+			if value > self.value(best):
+				best = p
+
+		return self.value(best), best
+
+	def value(self, array):
 		total = 0
-		for i in array:
-			total += values[array[i]]
+		for a in array:
+			total += a.value
 		return total
 
-# runs the algorithm
+
 if __name__ == '__main__':
 	W = 100
 	val = [10, 30, 20]
-	wt = [5, 10, 15]
+	wt = [5, 11, 15]
 	n = len(val)
 
-	b = Brute(n)
-	print(b.knapsack(wt, val, W))
+	it = [Item(wt[i], val[i]) for i in range(n)]
+
+	b = Brute(it, W)
+
+	b.generate_permutations([])
+	print(b.knapsack())
