@@ -19,14 +19,14 @@ class Tests(unittest.TestCase):
 		b.generate_permutations([])
 
 		print("values: " + values.__str__())
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 		print("max weight: " + max_weight.__str__())
 
 		val, arr = b.knapsack()
 
 		print("final value " + val.__str__())
 		print(arr)
-
+		print()
 
 	def test_10_elems(self):
 		values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -40,13 +40,14 @@ class Tests(unittest.TestCase):
 		b.generate_permutations([])
 
 		print("values: " + values.__str__())
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 		print("max weight: " + max_weight.__str__())
 
 		val, arr = b.knapsack()
 
 		print("final value " + val.__str__())
 		print(arr)
+		print()
 
 	def test_random(self):
 		num = random.randint(0, 20)
@@ -62,14 +63,15 @@ class Tests(unittest.TestCase):
 		b.generate_permutations([])
 
 		print("values: " + values.__str__())
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 		print("max weight: " + max_weight.__str__())
 
 		val, arr = b.knapsack()
 
 		print("final value " + val.__str__())
 		print(val, arr)
+		print()
 
 
 if __name__ == '__main__':
-	t = Tests
+	unittest.main()

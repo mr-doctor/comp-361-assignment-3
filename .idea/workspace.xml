@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d9a096-41ae-42f1-b644-c96029ee2063" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brute_0N.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/brute_0N.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/brute_0-1_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/brute_0-N_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/brute_0-N_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/brute_0-N_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,15 +19,15 @@
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$brute_0_1.coverage" NAME="brute 0-1 Coverage Results" MODIFIED="1537664873245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_1_test_py.coverage" NAME="Unittests in brute_0-1_test.py Coverage Results" MODIFIED="1537678335353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_dynamic_0_1_test_py.coverage" NAME="Unittests in dynamic_0-1_test.py Coverage Results" MODIFIED="1537691485837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_N_test_py.coverage" NAME="Unittests in brute_0-N_test.py Coverage Results" MODIFIED="1537700949631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_N_test_py.coverage" NAME="Unittests in brute_0-N_test.py Coverage Results" MODIFIED="1537701187896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="brute_0-N_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/brute_0-N_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="536">
+              <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -84,6 +82,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Brute(</find>
+      <find>max_weight</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -212,7 +216,7 @@
       <option name="_new_target" value="&quot;brute_0-N_test.Tests.test_10_elems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for dynamic_0-1_test.Tests.test_10_elems" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for brute_0-N_test.Tests.test_random" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="comp-361-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,7 +227,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;dynamic_0-1_test.Tests.test_10_elems&quot;" />
+      <option name="_new_target" value="&quot;brute_0-N_test.Tests.test_random&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests in brute_0-N_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -256,18 +260,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in brute_0-N_test.py" />
-      <item itemvalue="Python tests.Unittests for dynamic_0-1_test.Tests.test_10_elems" />
       <item itemvalue="Python tests.Unittests in dynamic_0-1_test.py" />
       <item itemvalue="Python.brute_0N" />
       <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_10_elems" />
+      <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_random" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in brute_0-N_test.py" />
+        <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_random" />
         <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_10_elems" />
         <item itemvalue="Python.brute_0N" />
         <item itemvalue="Python tests.Unittests in dynamic_0-1_test.py" />
-        <item itemvalue="Python tests.Unittests for dynamic_0-1_test.Tests.test_10_elems" />
       </list>
     </recent_temporary>
   </component>
@@ -285,35 +289,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 44m 50s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 47m 08s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 48m 48s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 49m 45s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 51m 52s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 52m 04s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 52m 09s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_brute_0-1_test_py - 2018.09.23 at 16h 52m 15s.xml">
-      <configuration name="Unittests in brute_0-1_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_dynamic_0-1_test_py - 2018.09.23 at 17h 07m 00s.xml">
-      <configuration name="Unittests in dynamic_0-1_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_dynamic_0-1_test_py - 2018.09.23 at 20h 31m 26s.xml">
       <configuration name="Unittests in dynamic_0-1_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 05m 42s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 06m 29s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 07m 03s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 07m 39s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 08m 31s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 09m 22s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 11m 22s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 11m 58s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 13m 20s.xml">
+      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -446,8 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/brute_0-N_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="536">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
