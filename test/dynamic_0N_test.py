@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from src.dynamic import Dynamic
+from src.dynamic_0N import Dynamic
 
 
 class Tests(unittest.TestCase):
@@ -14,16 +14,16 @@ class Tests(unittest.TestCase):
 		max_weight = 50
 		n = len(values)
 
-		val = b.knapsack(max_weight, weights, values, n)
+		val = b.knapsack(n, values, weights, max_weight)
 
+		print("THREE")
 		print("values: " + values.__str__())
 
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 
 		print("max weight: " + max_weight.__str__())
 
 		print("final value: " + val.__str__() + "\n")
-		self.assertEqual(val, 220)
 
 	def test_10_elems(self):
 		b = Dynamic()
@@ -32,31 +32,32 @@ class Tests(unittest.TestCase):
 		max_weight = 40
 		n = len(values)
 
-		val = b.knapsack(max_weight, weights, values, n)
+		val = b.knapsack(n, values, weights, max_weight)
 
+		print("TEN")
 		print("values: " + values.__str__())
 
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 
 		print("max weight: " + max_weight.__str__())
 
 		print("final value: " + val.__str__() + "\n")
-		self.assertEqual(val, 20)
 
 	def test_random(self):
 		b = Dynamic()
-		num = random.randint(0, 20)
+		num = random.randint(1, 20)
 
 		values = [random.randint(1, 20) for i in range(num)]
 		weights = [random.randint(1, 20) for i in range(num)]
 		max_weight = random.randint(1, 100)
 		n = len(values)
 
-		val = b.knapsack(max_weight, weights, values, n)
+		val = b.knapsack(n, values, weights, max_weight)
 
+		print("RANDOM")
 		print("values: " + values.__str__())
 
-		print("values: " + weights.__str__())
+		print("weights: " + weights.__str__())
 
 		print("max weight: " + max_weight.__str__())
 		print("final value: " + val.__str__() + "\n")

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d9a096-41ae-42f1-b644-c96029ee2063" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dynamic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dynamic_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/brute_0-N_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/brute_0N_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/dynamic_0-1_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/dynamic_01_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,22 +15,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/comp_361_assignment_3$main.coverage" NAME="main Coverage Results" MODIFIED="1537608383278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/comp_361_assignment_3$brute_0N.coverage" NAME="brute_0N Coverage Results" MODIFIED="1537699348703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$dynamic_0_1.coverage" NAME="dynamic 0-1 Coverage Results" MODIFIED="1537664866157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$grapher.coverage" NAME="grapher Coverage Results" MODIFIED="1537755708905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$dynamic.coverage" NAME="dynamic Coverage Results" MODIFIED="1537676090659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_dynamic_0N_test_py.coverage" NAME="Unittests in dynamic_0N_test.py Coverage Results" MODIFIED="1537737931899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$brute_0N.coverage" NAME="brute_0N Coverage Results" MODIFIED="1537699348703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$brute_0_1.coverage" NAME="brute 0-1 Coverage Results" MODIFIED="1537664873245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_1_test_py.coverage" NAME="Unittests in brute_0-1_test.py Coverage Results" MODIFIED="1537678335353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_dynamic_0_1_test_py.coverage" NAME="Unittests in dynamic_0-1_test.py Coverage Results" MODIFIED="1537691485837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_dynamic_0_1_test_py.coverage" NAME="Unittests in dynamic_0-1_test.py Coverage Results" MODIFIED="1537737762850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$main.coverage" NAME="main Coverage Results" MODIFIED="1537608383278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_N_test_py.coverage" NAME="Unittests in brute_0-N_test.py Coverage Results" MODIFIED="1537701187896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$Unittests_in_brute_0_1_test_py.coverage" NAME="Unittests in brute_0-1_test.py Coverage Results" MODIFIED="1537678335353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/comp_361_assignment_3$dynamic_0N.coverage" NAME="dynamic_0N Coverage Results" MODIFIED="1537738622751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="brute_0-N_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/brute_0-N_test.py">
+      <file leaf-file-name="brute_0N_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/brute_0N_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="918">
+              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -35,20 +41,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dynamic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dynamic.py">
+      <file leaf-file-name="dynamic_01.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dynamic_01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="dynamic_0N.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dynamic_0N.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dynamic_0N_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/dynamic_0N_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grapher.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/grapher.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,17 +86,17 @@
       <file leaf-file-name="brute_0N.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brute_0N.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="697">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dynamic_0-1_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/dynamic_0-1_test.py">
+      <file leaf-file-name="dynamic_01_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/dynamic_01_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="731">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -111,11 +141,14 @@
         <option value="$PROJECT_DIR$/test/brute 0-1 test.py" />
         <option value="$PROJECT_DIR$/src/brute.py" />
         <option value="$PROJECT_DIR$/src/dynamic.py" />
-        <option value="$PROJECT_DIR$/test/dynamic_0-1_test.py" />
         <option value="$PROJECT_DIR$/test/brute_0-1_test.py" />
         <option value="$PROJECT_DIR$/src/brute_0N.py" />
         <option value="$PROJECT_DIR$/test/brute_0-N_test.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/test/dynamic_0-1_test.py" />
+        <option value="$PROJECT_DIR$/test/dynamic_0N_test.py" />
+        <option value="$PROJECT_DIR$/src/dynamic_0N.py" />
+        <option value="$PROJECT_DIR$/test/grapher.py" />
       </list>
     </option>
   </component>
@@ -175,8 +208,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Daniel\workspace\comp-361-assignment-3\src" />
       <recent name="C:\Users\Daniel\workspace\comp-361-assignment-3\test" />
+      <recent name="C:\Users\Daniel\workspace\comp-361-assignment-3\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -191,8 +224,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="brute_0N" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.grapher">
+    <configuration name="dynamic_0N" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="comp-361-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,27 +238,32 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/brute_0N.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dynamic_0N.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for brute_0-N_test.Tests.test_10_elems" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="grapher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="comp-361-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;brute_0-N_test.Tests.test_10_elems&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/grapher.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for brute_0-N_test.Tests.test_random" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in brute_0N_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="comp-361-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -236,24 +274,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;brute_0-N_test.Tests.test_random&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests in brute_0-N_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="comp-361-assignment-3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/brute_0-N_test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/brute_0N_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in dynamic_0-1_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in dynamic_01_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="comp-361-assignment-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,23 +288,37 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/dynamic_0-1_test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/dynamic_01_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in dynamic_0N_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="comp-361-assignment-3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/dynamic_0N_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in brute_0-N_test.py" />
-      <item itemvalue="Python tests.Unittests in dynamic_0-1_test.py" />
-      <item itemvalue="Python.brute_0N" />
-      <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_10_elems" />
-      <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_random" />
+      <item itemvalue="Python tests.Unittests in brute_0N_test.py" />
+      <item itemvalue="Python.dynamic_0N" />
+      <item itemvalue="Python tests.Unittests in dynamic_0N_test.py" />
+      <item itemvalue="Python tests.Unittests in dynamic_01_test.py" />
+      <item itemvalue="Python.grapher" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in brute_0-N_test.py" />
-        <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_random" />
-        <item itemvalue="Python tests.Unittests for brute_0-N_test.Tests.test_10_elems" />
-        <item itemvalue="Python.brute_0N" />
-        <item itemvalue="Python tests.Unittests in dynamic_0-1_test.py" />
+        <item itemvalue="Python.grapher" />
+        <item itemvalue="Python.dynamic_0N" />
+        <item itemvalue="Python tests.Unittests in dynamic_0N_test.py" />
+        <item itemvalue="Python tests.Unittests in dynamic_01_test.py" />
+        <item itemvalue="Python tests.Unittests in brute_0N_test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -298,35 +336,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_dynamic_0-1_test_py - 2018.09.23 at 20h 31m 26s.xml">
+    <history-entry file="Unittests_in_dynamic_0-1_test_py - 2018.09.24 at 09h 22m 43s.xml">
       <configuration name="Unittests in dynamic_0-1_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 05m 42s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 22m 52s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 06m 29s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 22m 55s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 07m 03s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 22m 56s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 07m 39s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 22m 58s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 08m 31s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 23m 07s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 09m 22s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 23m 09s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 11m 22s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 23m 13s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 11m 58s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 24m 43s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_brute_0-N_test_py - 2018.09.23 at 23h 13m 20s.xml">
-      <configuration name="Unittests in brute_0-N_test.py" configurationId="tests" />
+    <history-entry file="Unittests_in_dynamic_0N_test_py - 2018.09.24 at 09h 25m 32s.xml">
+      <configuration name="Unittests in dynamic_0N_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -338,12 +376,11 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" x="189" y="442" width="1640" height="387" id="Run" order="2" type="WINDOWED" visible="true" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" x="189" y="442" width="1640" height="387" id="Run" order="2" type="WINDOWED" visible="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -354,6 +391,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +401,99 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/brute_0-N_test.py">
+    <entry file="file://$PROJECT_DIR$/test/brute_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_0N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dynamic_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brute_0N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dynamic_01_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brute_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/grapher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/brute_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brute_0N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dynamic_01_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -373,14 +503,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dynamic.py">
+    <entry file="file://$PROJECT_DIR$/src/brute_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/brute_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/dynamic_0-1_test.py">
+    <entry file="file://$PROJECT_DIR$/test/dynamic_01_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
@@ -426,44 +580,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brute_0N.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/brute_0-N_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/dynamic_0-1_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dynamic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="819" selection-start-line="819" selection-end-line="819" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/diff_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dynamic_01_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/brute_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_0N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamic_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dynamic_0N_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brute_0N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/grapher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
