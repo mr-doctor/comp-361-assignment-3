@@ -12,6 +12,7 @@ class Item:
 	def __repr__(self):
 		return self.__str__()
 
+
 class Node:
 
 	def __init__(self, level, value, bound, weight):
@@ -22,44 +23,43 @@ class Node:
 		self.max_profit = 0
 
 
-class Graph:
+class Graph01:
 
 	def __init__(self, items, W):
 		self.items = items
 		self.W = W
 		self.max_value = 0
 
-	def compare(self, a, b):
+	def val(self, a):
 		c1 = a.value / a.weight
-		c2 = b.value / b.weight
-		return c1 > c2
+		return c1
 
 	def graph(self, n):
-		Q = queue.Queue()
+		self.items.sort(key=self.val)
 
+		Q = queue.PriorityQueue()
 		root = Node(-1, 0, 0, 0)
-		Q.put(root, False)
-
-		current = Node(-2, 0, 0, 0)
+		Q.put((self.W, root), False)
 
 		while not Q.empty():
-			u = Q.get(False)
-			if u.level == -1:
-				current.level = 0
+			current = Node(-2, 0, 0, 0)
+			u = Q.get(False)[1]
 			if u.level == n - 1:
 				continue
+			if u.level == -1:
+				current.level = 0
 
-			current.level = u.level + 1
-			current.weight = u.weight + self.items[current.level].weight
 			current.value = u.value + self.items[current.level].value
+			current.weight = u.weight + self.items[current.level].weight
+			current.level = u.level + 1
+			current.bound = self.bound(current, n)
 
 			if current.weight <= self.W and current.value > self.max_value:
 				self.max_value = current.value
 
-			current.bound = self.bound(current, n)
-
 			if current.bound > self.max_value:
-				Q.put(current, False)
+				priority = self.val(current)
+				Q.put((priority, current), False)
 
 		return self.max_value
 
@@ -67,10 +67,9 @@ class Graph:
 		if current.weight >= self.W:
 			return 0
 
-		value_bound = current.value
-
-		j = current.level + 1
 		w = current.weight
+		j = current.level + 1
+		value_bound = current.value
 
 		while j < n and w + self.items[j].weight <= self.W:
 			w += self.items[j].weight
@@ -85,12 +84,11 @@ class Graph:
 
 if __name__ == "__main__":
 
-
 	v = [60, 100, 120]
 	wt = [10, 20, 30]
 	max_weight = 50
 
 	it = [Item(wt[i], v[i]) for i in range(len(v))]
 
-	g = Graph(it, max_weight)
+	g = Graph01(it, max_weight)
 	print(g.graph(len(it)))

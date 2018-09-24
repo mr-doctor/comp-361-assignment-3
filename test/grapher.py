@@ -4,6 +4,7 @@ import time
 from src.brute_0N import Brute, Item
 from src.dynamic_01 import Dynamic as Dynamic01
 from src.dynamic_0N import Dynamic0N
+from src.graph_search_approximate_0N import Graph0N
 
 current_millis_time = lambda: int(round(time.time() * 1000))
 
@@ -19,6 +20,7 @@ class Grapher:
 
 			print((current_millis_time() - time) / 3)
 
+	# WARNING, THIS WILL FREEZE UP YOUR COMPUTER IF YOU LET IT RUN
 	def graph_brute_0N(self, values, weights):
 		items = [Item(weights[i], values[i]) for i in range(len(values))]
 		W = 100
@@ -40,6 +42,18 @@ class Grapher:
 
 			print((current_millis_time() - time) / 3)
 
+	# WARNING, THIS WILL FREEZE UP YOUR COMPUTER IF YOU LET IT RUN
+	def graph_graph_0N(self, values, weights):
+		items = [Item(weights[i], values[i]) for i in range(len(values))]
+		W = 100
+
+		for i in range(len(values)):
+			b = Graph0N(items[0:i], W)
+			time = current_millis_time()
+			b.generate_permutations([])
+			b.knapsack()
+			print(current_millis_time() - time)
+
 if __name__ == "__main__":
 	g = Grapher()
 
@@ -48,5 +62,6 @@ if __name__ == "__main__":
 	weights = [random.randint(1, 20) for i in range(num)]
 
 	# g.graph_dynamic_01(values, weights)
-	g.graph_brute_0N(values, weights)
+	# g.graph_brute_0N(values, weights)
 	# g.graph_dynamic_0N(values, weights)
+	g.graph_graph_0N(values, weights)
