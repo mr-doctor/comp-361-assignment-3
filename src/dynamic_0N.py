@@ -1,4 +1,4 @@
-class Dynamic:
+class Dynamic0N:
 
 	def knapsack(self, n, values, weights, W):
 		table = [0 for i in range(W + 1)]
@@ -15,5 +15,5 @@ if __name__ == "__main__":
 	wt = [10, 20, 30]
 	max_weight = 50
 	len = len(v)
-	d = Dynamic()
+	d = Dynamic0N()
 	print(d.knapsack(len, v, wt, max_weight))

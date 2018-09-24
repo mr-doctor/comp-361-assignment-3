@@ -1,14 +1,14 @@
 import random
 import unittest
 
-from src.dynamic_0N import Dynamic
+from src.dynamic_0N import Dynamic0N
 
 
 class Tests(unittest.TestCase):
 	pass
 
 	def test_3_elems(self):
-		b = Dynamic()
+		b = Dynamic0N()
 		values = [60, 100, 120]
 		weights = [10, 20, 30]
 		max_weight = 50
@@ -26,7 +26,7 @@ class Tests(unittest.TestCase):
 		print("final value: " + val.__str__() + "\n")
 
 	def test_10_elems(self):
-		b = Dynamic()
+		b = Dynamic0N()
 		values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 		weights = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 		max_weight = 40
@@ -44,7 +44,7 @@ class Tests(unittest.TestCase):
 		print("final value: " + val.__str__() + "\n")
 
 	def test_random(self):
-		b = Dynamic()
+		b = Dynamic0N()
 		num = random.randint(1, 20)
 
 		values = [random.randint(1, 20) for i in range(num)]

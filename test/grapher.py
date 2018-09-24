@@ -3,6 +3,7 @@ import time
 
 from src.brute_0N import Brute, Item
 from src.dynamic_01 import Dynamic as Dynamic01
+from src.dynamic_0N import Dynamic0N
 
 current_millis_time = lambda: int(round(time.time() * 1000))
 
@@ -29,12 +30,23 @@ class Grapher:
 			b.knapsack()
 			print(current_millis_time() - time)
 
+	def graph_dynamic_0N(self, values, weights):
+		d = Dynamic0N()
+		W = 100
+		for i in range(len(values)):
+			time = current_millis_time()
+			for j in range(3):
+				d.knapsack(i, values[0:i], weights[0:i], W)
+
+			print((current_millis_time() - time) / 3)
+
 if __name__ == "__main__":
 	g = Grapher()
 
-	num = 12
+	num = 500
 	values = [random.randint(1, 20) for i in range(num)]
 	weights = [random.randint(1, 20) for i in range(num)]
 
 	# g.graph_dynamic_01(values, weights)
 	g.graph_brute_0N(values, weights)
+	# g.graph_dynamic_0N(values, weights)
