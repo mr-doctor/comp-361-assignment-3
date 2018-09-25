@@ -60,7 +60,7 @@ void Application::init() {
 		b.rotate[0][0] += 1;
 	}*/
 
-	show_spline(keyframes[0], keyframes[1], keyframes[2], keyframes[3], 100); 
+	show_spline(keyframes[0], keyframes[1], keyframes[2], keyframes[3], 100);
 
 //	printer::print(m_skeleton);
 
