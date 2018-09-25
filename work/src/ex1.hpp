@@ -63,13 +63,6 @@ public:
 
 	void apply_arcball(glm::vec2 current_mouse_XY);
 
-	int m_divisions_lon = 10;
-	int m_divisions_lat = 10;
-	bool m_sphere_latlong = false;
-
-	bool m_sphere_from_cube = false;
-	int m_sphere_mode = 0;
-
 	void set_shaders(const char *vertex, const char *fragment);
 
 	Skeleton m_skeleton = Skeleton("");
@@ -78,9 +71,6 @@ public:
 
 	static cgra::Mesh m_bone_mesh;
 	static cgra::Mesh m_sphere_mesh;
-	static cgra::Mesh m_arrow_x_mesh;
-	static cgra::Mesh m_arrow_y_mesh;
-	static cgra::Mesh m_arrow_z_mesh;
 
 	static void draw_bone(cgra::Mesh mesh, glm::vec3 scale, glm::mat4 rotate,
 	                      glm::vec3 global_translation,
@@ -91,16 +81,18 @@ public:
 
 	static cgra::Mesh m_bone_segment_mesh;
 
-	void do_walking();
-
-	void do_sitting();
-
-	void do_dancing();
-
 	void do_T();
 
 	static void draw(cgra::Mesh mesh, glm::vec3 position, glm::vec3 scale, glm::mat4 rotate, glm::vec3 global_translation,
 					 glm::vec3 global_scale, glm::mat4 global_rotation);
 
 	bool core;
+
+	std::vector<glm::vec3> keyframes;
+
+	void show_spline(glm::vec3 p0, glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, float num_points);
+
+	float get_t(float t, glm::vec3 p0, glm::vec3 p1);
+
+	std::vector<glm::vec3> new_points;
 };

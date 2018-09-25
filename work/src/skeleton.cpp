@@ -141,25 +141,6 @@ void Skeleton::renderBoneCore(bone *bone,
 	glm::vec3 new_pos = position + bone->boneDir * bone->length * 5.0f;
 	if (bone->name != "root") {
 
-		Application::draw_bone(Application::m_arrow_x_mesh,
-							   glm::vec3(0.5),
-							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 1, 0)),
-							   global_translation,
-							   global_scale,
-							   global_rotation);
-		Application::draw_bone(Application::m_arrow_y_mesh,
-							   glm::vec3(0.5),
-							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(0, 0, 1)),
-							   global_translation,
-							   global_scale,
-							   global_rotation);
-		Application::draw_bone(Application::m_arrow_z_mesh,
-							   glm::vec3(0.5),
-							   rotation * glm::rotate(glm::mat4(1), glm::pi<float>() / 2.0f, glm::vec3(1, 0, 0)),
-							   global_translation,
-							   global_scale,
-							   global_rotation);
-
 		Application::draw_bone(Application::m_bone_mesh, glm::vec3(1, 1, bone->length * 5.0f),
 							   rotation, global_translation, global_scale, global_rotation);
 	}
