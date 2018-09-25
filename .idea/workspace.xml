@@ -281,8 +281,8 @@
       <file leaf-file-name="ex1.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/work/src/ex1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+            <state relative-caret-position="327">
+              <caret line="62" column="77" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -312,7 +312,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>false</find>
       <find>bit</find>
       <find>line =</find>
       <find>axes</find>
@@ -340,8 +339,9 @@
       <find>inl</find>
       <find>spline</find>
       <find>Vector2</find>
-      <find>draw</find>
       <find>core</find>
+      <find>draw</find>
+      <find>show</find>
     </findStrings>
     <replaceStrings>
       <replace>0.5 : -0.5</replace>
@@ -534,12 +534,12 @@
       <workItem from="1535321520037" duration="17882000" />
       <workItem from="1536812692576" duration="333000" />
       <workItem from="1536813634164" duration="996000" />
-      <workItem from="1537842800807" duration="10798000" />
+      <workItem from="1537842800807" duration="11057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188861000" />
+    <option name="totallyTimeSpent" value="189120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -861,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/work/src/ex1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+        <state relative-caret-position="327">
+          <caret line="62" column="77" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
         </state>
       </provider>
     </entry>
